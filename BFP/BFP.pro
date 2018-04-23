@@ -26,7 +26,8 @@ SOURCES += \
         BFP.c \
     absbfp.c \
     addbfp.c \
-    compBfp.c
+    compBfp.c \
+    negBfp.c
 
 HEADERS += \
         BFP.h \

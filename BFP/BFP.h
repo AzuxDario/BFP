@@ -8,6 +8,7 @@ typedef struct { char number[bfpArraySize]; } bfp;
 void absBfp(bfp* value);
 bfp addBfp(bfp* value1, bfp* value2);
 int compBfp(bfp* value1, bfp* value2);
+void negBfp(bfp* value);
 
 int fun(int a, int b);
 
