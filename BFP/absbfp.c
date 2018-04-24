@@ -2,5 +2,5 @@
 
 void absBfp(bfp* value)
 {
-    value->number[signPosition] &= 0x7F;
+    value->sign &= 0x00;
 }

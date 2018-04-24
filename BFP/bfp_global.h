@@ -6,7 +6,7 @@
 #define exponentRightPosition       20
 #define significantLeftPosition     21
 #define significantRightPosition    255
-#define bfpArraySize                32
+#define bfpSignificantArraySize     28
 
 
 #endif // TESTLIBRART_GLOBAL_H

@@ -2,5 +2,5 @@
 
 void negBfp(bfp* value)
 {
-    value->number[signPosition] ^= 0x80;
+    value->sign ^= 0x01;
 }
