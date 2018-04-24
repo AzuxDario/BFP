@@ -3,7 +3,7 @@
 int lessBfp(bfp* value1, bfp* value2)
 {
     int i;
-    if(value1->sign > value2->sign)
+    if(value1->sign < value2->sign)
     {
         return 0;
     }
