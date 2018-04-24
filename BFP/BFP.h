@@ -14,10 +14,6 @@ typedef struct
     char significant[bfpSignificantArraySize]; /*!< significant of number */
 } bfp;
 
-void absBfp(bfp* value);
-bfp addBfp(bfp* value1, bfp* value2);
-void negBfp(bfp* value);
-
 int fun(int a, int b);
 
 #endif // TESTLIBRART_H

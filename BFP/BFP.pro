@@ -27,8 +27,7 @@ include(Comparsion/Comparsion.pri)
 include(Initialization/Initialization.pri)
 
 SOURCES += \
-        BFP.c \
-    addbfp.c \
+        BFP.c
 
 HEADERS += \
         BFP.h \
