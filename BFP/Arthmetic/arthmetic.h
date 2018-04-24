@@ -10,8 +10,8 @@ void absBfp(bfp* value);
 
 //! Add second value to first value.
 /*!
-  \param value value where we add.
-  \param value value to be added.
+  \param value1 value where we add.
+  \param value2 value to be added.
 */
 void addBfp(bfp* value1, bfp* value2);
 
