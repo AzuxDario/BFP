@@ -13,7 +13,7 @@ void absBfp(bfp* value);
   \param value value where we add.
   \param value value to be added.
 */
-bfp addBfp(bfp* value1, bfp* value2);
+void addBfp(bfp* value1, bfp* value2);
 
 //! Negate value.
 /*!
