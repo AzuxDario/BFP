@@ -3,11 +3,15 @@
 
 #include "bfp_global.h"
 
+//!  BFP class.
+/*!
+  Class represents big floating point value.
+*/
 typedef struct
 {
-    char sign; //Must be 0 or 1
-    int exponent;
-    char significant[bfpSignificantArraySize];
+    char sign; /*!< sing of number */
+    int exponent; /*!< exponent  of number */
+    char significant[bfpSignificantArraySize]; /*!< significant of number */
 } bfp;
 
 void absBfp(bfp* value);
