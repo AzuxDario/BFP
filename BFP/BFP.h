@@ -5,7 +5,7 @@
 
 typedef struct
 {
-    char sign;
+    char sign; //Must be 0 or 1
     int exponent;
     char significant[bfpSignificantArraySize];
 } bfp;
@@ -13,6 +13,8 @@ typedef struct
 void absBfp(bfp* value);
 bfp addBfp(bfp* value1, bfp* value2);
 int equalBfp(bfp* value1, bfp* value2);
+int greatherBfp(bfp* value1, bfp* value2);
+int lessBfp(bfp* value1, bfp* value2);
 void negBfp(bfp* value);
 
 int fun(int a, int b);

@@ -27,7 +27,9 @@ SOURCES += \
     absbfp.c \
     addbfp.c \
     negBfp.c \
-    equalBfp.c
+    equalBfp.c \
+    greatherBfp.c \
+    lessBfp.c
 
 HEADERS += \
         BFP.h \
