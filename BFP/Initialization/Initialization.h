@@ -4,7 +4,7 @@
 
 //! Initialize variable by value zero.
 /*!
-  \param value pointer to value to initialize.
+  \param value value to initialize.
 */
 void initZero(bfp* value);
 
