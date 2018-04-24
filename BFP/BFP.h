@@ -12,13 +12,6 @@ typedef struct
 
 void absBfp(bfp* value);
 bfp addBfp(bfp* value1, bfp* value2);
-
-
-//! Initialize variable by value zero.
-/*!
-  \param value pointer to value to initialize.
-*/
-void initZero(bfp* value);
 void negBfp(bfp* value);
 
 int fun(int a, int b);

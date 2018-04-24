@@ -1,4 +1,4 @@
-#include "BFP.h"
+#include "Initialization.h"
 
 void initZero(bfp* value)
 {
