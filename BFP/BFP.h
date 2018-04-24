@@ -12,10 +12,13 @@ typedef struct
 
 void absBfp(bfp* value);
 bfp addBfp(bfp* value1, bfp* value2);
-int equalBfp(bfp* value1, bfp* value2);
-int greatherBfp(bfp* value1, bfp* value2);
+
+
+//! Initialize variable by value zero.
+/*!
+  \param value pointer to value to initialize.
+*/
 void initZero(bfp* value);
-int lessBfp(bfp* value1, bfp* value2);
 void negBfp(bfp* value);
 
 int fun(int a, int b);

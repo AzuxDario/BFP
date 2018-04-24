@@ -1,4 +1,4 @@
-#include "BFP.h"
+#include "comparsion.h"
 
 int lessBfp(bfp* value1, bfp* value2)
 {

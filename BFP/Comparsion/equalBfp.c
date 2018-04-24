@@ -1,4 +1,4 @@
-#include "BFP.h"
+#include "comparsion.h"
 
 int equalBfp(bfp* value1, bfp* value2)
 {
