@@ -15,6 +15,17 @@ void initString(bfp* target, char* source)
         {
             break;
         }
+        // If sing is detected
+        if(source[i] == '-')
+        {
+            target->sign = 1;
+            continue;
+        }
+        else if(source[i] == '+')
+        {
+            target->sign = 0;
+            continue;
+        }
         // If under index it separator set position of separator
         if(source[i] == '.')
         {
