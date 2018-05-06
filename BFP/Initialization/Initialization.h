@@ -9,6 +9,12 @@
 */
 void initDouble(bfp* value1, double value2);
 
+//! Initialize variable from string.
+/*!
+  \param value value to initialize in x.yyyy... format.
+*/
+void initString(bfp* target, char* source);
+
 //! Initialize variable by value zero.
 /*!
   \param value value to initialize.
