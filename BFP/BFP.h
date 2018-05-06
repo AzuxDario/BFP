@@ -11,6 +11,7 @@ typedef struct
 {
     char sign; /*!< sing of number */
     int exponent; /*!< exponent  of number */
+    char separatorPlace; /*!< place of separator*/
     char significant[bfpSignificantArraySize]; /*!< significant of number */
 } bfp;
 
