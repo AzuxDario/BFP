@@ -9,6 +9,13 @@
 */
 void initDouble(bfp* target, double source);
 
+//! Initialize variable by float value
+/*!
+  \param value1 value to initialize.
+  \param value2 value to be use in initialization.
+*/
+void initFloat(bfp* target, float source);
+
 //! Initialize variable from string.
 /*!
   \param value value to initialize in x.yyyy... format.
