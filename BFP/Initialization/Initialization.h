@@ -15,6 +15,14 @@ void initDouble(bfp* target, double source);
 */
 void initString(bfp* target, char* source);
 
+
+//! Initialize variable from string.
+/*!
+  \param value value to initialize in x.yyyy... format.
+  \param value exponent.
+*/
+void initStringExp(bfp* target, char* source, int exponent);
+
 //! Initialize variable by value zero.
 /*!
   \param value value to initialize.
