@@ -6,7 +6,8 @@ SOURCES += \
     $$PWD/initString.c \
     $$PWD/normalization.c \
     $$PWD/initStringExp.c \
-    $$PWD/initFloat.c
+    $$PWD/initFloat.c \
+    $$PWD/initLongLong.c
 
 HEADERS += \
     $$PWD/Initialization.h

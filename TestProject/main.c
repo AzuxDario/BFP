@@ -10,11 +10,12 @@ int main()
     result = fun(a, b);
     printf("Wynik: %d", result);
     float value = 1.2345f;
-    bfp number, number2, number3, number4, number5;
+    bfp number, number2, number3, number4, number5, number6;
     initString(&number, "12.34567890");
     initString(&number2, "0.00123");
     initStringExp(&number3, "0.00123", -1);
     initString(&number4, "12");
     initFloat(&number5, value);
+    initLongLong(&number6, 123456);
     printf("Done");
 }

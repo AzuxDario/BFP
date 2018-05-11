@@ -4,29 +4,37 @@
 
 //! Initialize variable by double value
 /*!
-  \param value1 value to initialize.
-  \param value2 value to be use in initialization.
+  \param target value to initialize.
+  \param source value to be use in initialization.
 */
 void initDouble(bfp* target, double source);
 
 //! Initialize variable by float value
 /*!
-  \param value1 value to initialize.
-  \param value2 value to be use in initialization.
+  \param target value to initialize.
+  \param source value to be use in initialization.
 */
 void initFloat(bfp* target, float source);
 
+//! Initialize variable by long long value
+/*!
+  \param target value to initialize.
+  \param source value to be use in initialization.
+*/
+
 //! Initialize variable from string.
 /*!
-  \param value value to initialize in x.yyyy... format.
+  \param target value to initialize.
+  \param source value to be use in initialize in x.yyyy... format.
 */
 void initString(bfp* target, char* source);
 
 
 //! Initialize variable from string.
 /*!
-  \param value value to initialize in x.yyyy... format.
-  \param value exponent.
+  \param target value to initialize in x.yyyy... format.
+  \param source value to be use in initialize in x.yyyy... format.
+  \param exponent exponent.
 */
 void initStringExp(bfp* target, char* source, int exponent);
 
