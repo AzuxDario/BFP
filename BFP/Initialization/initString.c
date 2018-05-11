@@ -1,14 +1,15 @@
 #include "Initialization.h"
+#include <stdbool.h>
 
 void initString(bfp* target, char* source)
 {
-    int i, position = 0;
-
+    int position = 0;
+    bool isSeparatorDetected = false;
     // Assing zero
     initZero(target);
 
     // Assing value
-    for(i = 0; i <= bfpSignificantArraySize; i++)
+    for(int i = 0; i <= bfpSignificantArraySize; i++)
     {
         // If undex index is \0 end assigning
         if(source[i] == '\0')
@@ -29,6 +30,7 @@ void initString(bfp* target, char* source)
         // If under index it separator set position of separator
         if(source[i] == '.')
         {
+            isSeparatorDetected = true;
             target->separatorPlace = (char)i;
             continue;
         }
@@ -37,6 +39,11 @@ void initString(bfp* target, char* source)
         position++;
     }
 
+    // Check position of separator
+    if(isSeparatorDetected == false)
+    {
+        target->separatorPlace = position;
+    }
     // Normalize
     normalization(target);
 }
