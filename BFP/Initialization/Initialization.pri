@@ -7,7 +7,8 @@ SOURCES += \
     $$PWD/normalization.c \
     $$PWD/initStringExp.c \
     $$PWD/initFloat.c \
-    $$PWD/initLongLong.c
+    $$PWD/initLongLong.c \
+    $$PWD/initInt.c
 
 HEADERS += \
     $$PWD/Initialization.h

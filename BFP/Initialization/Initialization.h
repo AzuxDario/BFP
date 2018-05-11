@@ -16,6 +16,13 @@ void initDouble(bfp* target, double source);
 */
 void initFloat(bfp* target, float source);
 
+//! Initialize variable by integer value
+/*!
+  \param target value to initialize.
+  \param source value to be use in initialization.
+*/
+void initInt(bfp* target, int source);
+
 //! Initialize variable by long long value
 /*!
   \param target value to initialize.

@@ -1,5 +1,4 @@
 #include "Initialization.h"
-#include <math.h>
 #include <stdio.h>
 
 void initLongLong(bfp* target, long long source)
