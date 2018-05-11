@@ -9,9 +9,12 @@ int main()
     b = 10;
     result = fun(a, b);
     printf("Wynik: %d", result);
-    bfp number, number2, number3;
+    double value = 1.2345;
+    bfp number, number2, number3, number4, number5;
     initString(&number, "12.34567890");
     initString(&number2, "0.00123");
     initStringExp(&number3, "0.00123", -1);
+    initString(&number4, "12");
+    initDouble(&number5, value);
     printf("Done");
 }

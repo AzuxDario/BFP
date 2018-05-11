@@ -1,13 +1,10 @@
 #include "Initialization.h"
 #include <math.h>
+#include <stdio.h>
 
 void initDouble(bfp* target, double source)
 {
-    int negative;
-    initZero(target);
-
-    negative = source < 0;
-    source = fabs(source);
-
-    target->sign = negative ? 1 : 0;
+    char buffer[60];
+    sprintf(buffer, "%-55.55f", source);
+    initString(target, buffer);
 }
