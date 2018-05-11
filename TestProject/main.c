@@ -9,7 +9,8 @@ int main()
     b = 10;
     result = fun(a, b);
     printf("Wynik: %d", result);
-    bfp number;
-    initString(&number, "1.234567890");
+    bfp number, number2;
+    initString(&number, "12.34567890");
+    initString(&number2, "0.00123");
     printf("Done");
 }

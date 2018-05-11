@@ -1,13 +1,13 @@
 #include "Initialization.h"
 #include <math.h>
 
-void initDouble(bfp* value1, double value2)
+void initDouble(bfp* target, double source)
 {
     int negative;
-    initZero(value1);
+    initZero(target);
 
-    negative = value2 < 0;
-    value2 = fabs(value2);
+    negative = source < 0;
+    source = fabs(source);
 
-    value1->sign = negative ? 1 : 0;
+    target->sign = negative ? 1 : 0;
 }

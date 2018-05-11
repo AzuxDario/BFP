@@ -32,9 +32,11 @@ void initString(bfp* target, char* source)
             target->separatorPlace = (char)i;
             continue;
         }
-        target->significant[position] = source[i];
+        //Subtract 0x30 to change value in ascii code to number
+        target->significant[position] = source[i] - 0x30;
         position++;
     }
 
     // Normalize
+    normalization(target);
 }
