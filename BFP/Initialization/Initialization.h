@@ -21,6 +21,7 @@ void initFloat(bfp* target, float source);
   \param target value to initialize.
   \param source value to be use in initialization.
 */
+void initLongLong(bfp* target, long long source);
 
 //! Initialize variable from string.
 /*!
