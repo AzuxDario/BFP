@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "BFP.h"
 #include "Initialization/Initialization.h"
+#include "Conversion/Conversion.h"
 
 int main()
 {
@@ -17,5 +18,7 @@ int main()
     initString(&number4, "12");
     initFloat(&number5, value);
     initLongLong(&number6, 123456);
+    char * string;
+    string = toStringExp(&number6, 10);
     printf("Done");
 }

@@ -24,6 +24,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 include(Arthmetic/Arthmetic.pri)
 include(Comparsion/Comparsion.pri)
+include(Conversion/Conversion.pri)
 include(Initialization/Initialization.pri)
 
 SOURCES += \
