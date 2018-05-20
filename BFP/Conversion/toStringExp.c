@@ -11,6 +11,13 @@ char* toStringExp(bfp* value, unsigned int precision)
     unsigned int indexOfValue = 0;
     unsigned int sizeOf = 0;
 
+    // If precision is too big change it to maximum
+    if(precision > bfpSignificantArraySize - 2)
+    {
+        precision = bfpSignificantArraySize - 2;
+    }
+
+    // Check sign of value and alloc necessary memory
     if(value->sign == 0)
     {
         // One for first number, other one for separator
@@ -26,6 +33,7 @@ char* toStringExp(bfp* value, unsigned int precision)
         indexOfResult = 1;
     }
 
+    // Copy values to result
     for(indexOfResult; indexOfResult < sizeOf; indexOfResult++)
     {
         if(value->separatorPlace == indexOfResult)
@@ -38,12 +46,17 @@ char* toStringExp(bfp* value, unsigned int precision)
             indexOfValue++;
         }
     }
+    // End string with \0
     result[sizeOf - 1] = '\0';
+
+    // Realloc memory to make space for exponent
     realloc(result, sizeof(char) * (sizeOf + 22));
 
+    // Alloc necessary space for exponent and print exponento to it
     exponent = malloc(sizeof(char) * 20);
     sprintf(exponent,"%-d", value->exponent);
 
+    // Add strings to result
     strcat(result, "E");
     strcat(result, exponent);
 

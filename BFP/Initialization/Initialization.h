@@ -40,7 +40,7 @@ void initString(bfp* target, char* source);
 
 //! Initialize variable from string.
 /*!
-  \param target value to initialize in x.yyyy... format.
+  \param target value to initialize.
   \param source value to be use in initialize in x.yyyy... format.
   \param exponent exponent.
 */

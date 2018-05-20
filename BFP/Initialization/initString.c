@@ -31,7 +31,7 @@ void initString(bfp* target, char* source)
         if(source[i] == '.')
         {
             isSeparatorDetected = true;
-            target->separatorPlace = (char)i;
+            target->separatorPlace = i;
             continue;
         }
         //Subtract 0x30 to change value in ascii code to number

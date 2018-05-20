@@ -9,7 +9,7 @@ int main()
     a = 10;
     b = 10;
     result = fun(a, b);
-    printf("Wynik: %d", result);
+    printf("Wynik: %d\n", result);
     float value = 1.2345f;
     bfp number, number2, number3, number4, number5, number6;
     initString(&number, "12.34567890");
@@ -20,5 +20,6 @@ int main()
     initLongLong(&number6, 123456);
     char * string;
     string = toStringExp(&number6, 10);
-    printf("Done");
+    printf("%s\n",string);
+    printf("Done\n");
 }
