@@ -1,7 +1,6 @@
 #ifndef CONVERSION_H
 #define CONVERSION_H
 #include "BFP.h"
-#include <stdlib.h>
 
 //! Convert bfp to string.
 /*!

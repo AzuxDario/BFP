@@ -1,9 +1,10 @@
 #include "Conversion.h"
+#include <stdlib.h>
 
 
 char* toString(bfp* value, unsigned int precision)
 {
-    char* result;
+    char* result = NULL;
     unsigned int indexOfResult = 0;
     unsigned int indexOfValue = 0;
     unsigned int sizeOf = 0;
@@ -42,7 +43,7 @@ char* toString(bfp* value, unsigned int precision)
         }
 
         // Realloc memory to make space for value after separator
-        realloc(result, sizeof(char) * (sizeOf + precision));
+        result = realloc(result, sizeof(char) * (sizeOf + precision));
 
         for(unsigned int i = 0; i < precision; i++)
         {
@@ -82,7 +83,7 @@ char* toString(bfp* value, unsigned int precision)
             result[indexOfResult++] = '.';
         }
         // Realloc memory to make space for value after separator
-        realloc(result, sizeof(char) * (sizeOf + precision));
+        result = realloc(result, sizeof(char) * (sizeOf + precision));
 
         // Add zeros as much as exponent
         for(int i = 0; i < -(value->exponent + 1); i++)

@@ -50,7 +50,7 @@ char* toStringExp(bfp* value, unsigned int precision)
     result[sizeOf - 1] = '\0';
 
     // Realloc memory to make space for exponent
-    realloc(result, sizeof(char) * (sizeOf + 22));
+    result = realloc(result, sizeof(char) * (sizeOf + 22));
 
     // Alloc necessary space for exponent and print exponento to it
     exponent = malloc(sizeof(char) * 20);
@@ -59,6 +59,8 @@ char* toStringExp(bfp* value, unsigned int precision)
     // Add strings to result
     strcat(result, "E");
     strcat(result, exponent);
+
+    free(exponent);
 
     return result;
 }
