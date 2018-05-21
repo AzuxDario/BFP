@@ -18,8 +18,12 @@ int main()
     initString(&number4, "12");
     initFloat(&number5, value);
     initLongLong(&number6, 123456);
-    char * string;
+    char *string, *string2, *string3;
     string = toStringExp(&number6, 10);
-    printf("%s\n",string);
+    string2 = toString(&number6, 5);
+    string3 = toString(&number2, 10);
+    printf("%s\n", string);
+    printf("%s\n", string2);
+    printf("%s\n", string3);
     printf("Done\n");
 }
