@@ -2,6 +2,12 @@
 #define COMPARSION_H
 #include "BFP.h"
 
+//! Check if valiue equal zero.
+/*!
+  \param value value to check.
+*/
+int isZero(bfp* value);
+
 //! Check if first variable is less than second.
 /*!
   \param value1 value to check.

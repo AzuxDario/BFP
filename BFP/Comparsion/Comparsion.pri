@@ -3,7 +3,8 @@ DEPENDPATH += Comparsion
 SOURCES += \
     $$PWD/equalBfp.c \
     $$PWD/greatherBfp.c \
-    $$PWD/lessBfp.c
+    $$PWD/lessBfp.c \
+    $$PWD/isZero.c
 
 HEADERS += \
     $$PWD/comparsion.h
