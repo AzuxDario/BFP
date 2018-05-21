@@ -81,6 +81,9 @@ char* toString(bfp* value, unsigned int precision)
         {
             result[indexOfResult++] = '.';
         }
+        // Realloc memory to make space for value after separator
+        realloc(result, sizeof(char) * (sizeOf + precision));
+
         // Add zeros as much as exponent
         for(int i = 0; i < -(value->exponent + 1); i++)
         {

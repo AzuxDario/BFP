@@ -21,7 +21,7 @@ int main()
     char *string, *string2, *string3;
     string = toStringExp(&number6, 10);
     string2 = toString(&number6, 5);
-    string3 = toString(&number2, 10);
+    string3 = toString(&number2, 500);
     printf("%s\n", string);
     printf("%s\n", string2);
     printf("%s\n", string3);
