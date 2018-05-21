@@ -2,6 +2,13 @@
 #define INITIALIZATION_H
 #include "BFP.h"
 
+//! Initialize variable by BFP value
+/*!
+  \param target value to initialize.
+  \param source value to be use in initialization.
+*/
+void initBFP(bfp* target, bfp* source);
+
 //! Initialize variable by double value
 /*!
   \param target value to initialize.

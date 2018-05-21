@@ -8,7 +8,8 @@ SOURCES += \
     $$PWD/initStringExp.c \
     $$PWD/initFloat.c \
     $$PWD/initLongLong.c \
-    $$PWD/initInt.c
+    $$PWD/initInt.c \
+    $$PWD/initBFP.c
 
 HEADERS += \
     $$PWD/Initialization.h
