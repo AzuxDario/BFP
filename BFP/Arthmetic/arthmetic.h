@@ -56,4 +56,32 @@ void negBfp(bfp* value);
   \param value2 subtrahend.
 */
 void subBfp(bfp* value1, bfp* value2);
+
+//! Subtract second value from first value.
+/*!
+  \param value1 minuend.
+  \param value2 subtrahend.
+*/
+void subDouble(bfp* value1, double value2);
+
+//! Subtract second value from first value.
+/*!
+  \param value1 minuend.
+  \param value2 subtrahend.
+*/
+void subFloat(bfp* value1, float value2);
+
+//! Subtract second value from first value.
+/*!
+  \param value1 minuend.
+  \param value2 subtrahend.
+*/
+void subInt(bfp* value1, int value2);
+
+//! Subtract second value from first value.
+/*!
+  \param value1 minuend.
+  \param value2 subtrahend.
+*/
+void subLongLong(bfp* value1, long long value2);
 #endif // ARTHMETIC_H
