@@ -82,6 +82,4 @@ void mulBfp(bfp* value1, bfp* value2)
     normalization(&result);
 
     initBFP(value1, &result);
-
-    int b = 0;
 }
