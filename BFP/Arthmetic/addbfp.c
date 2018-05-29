@@ -25,14 +25,14 @@ void addBfp(bfp* value1, bfp* value2)
         if(greatherBfp(value1, value2) == 1)
         {
             // First is greather
-            initBFP(&greather, value2);
-            initBFP(&lower, value1);
+            initBFP(&greather, value1);
+            initBFP(&lower, value2);
         }
         else
         {
             // Second is greather
-            initBFP(&greather, value1);
-            initBFP(&lower, value2);
+            initBFP(&greather, value2);
+            initBFP(&lower, value1);
         }
 
         // Make exponent equals
@@ -43,7 +43,7 @@ void addBfp(bfp* value1, bfp* value2)
             {
                 if(i != 0)
                 {
-                    lower.significant[i-1] = lower.significant[i];
+                    lower.significant[i] = lower.significant[i-1];
                 }
                 else
                 {
@@ -77,12 +77,12 @@ void addBfp(bfp* value1, bfp* value2)
             // -1 to avoid take value out of scope.
             for(int i = bfpSignificantArraySize - 1; i > 0; i--)
             {
-                greather.significant[i-1] = greather.significant[i];
+                greather.significant[i] = greather.significant[i-1];
             }
             greather.exponent++;
 
             // Assign carry.
-            greather.significant[bfpSignificantArraySize - 1] = carriage;
+            greather.significant[0] = carriage;
             carriage = 0;
 
         }
