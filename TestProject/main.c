@@ -12,7 +12,7 @@ int main()
     result = fun(a, b);
     printf("Wynik: %d\n", result);
     float value = 1.2345f;
-    bfp number, number2, number3, number4, number5, number6, numberZero, add1, add2;
+    bfp number, number2, number3, number4, number5, number6, numberZero, add1, add2, sub1, sub2;
     initString(&number, "12.34567890");
     initString(&number2, "0.00123");
     initStringExp(&number3, "0.00123", -1);
@@ -22,15 +22,20 @@ int main()
     initString(&numberZero, "0");
     initString(&add1, "9.23");
     initString(&add2, "2");
-    char *string, *string2, *string3, *string4;
+    initString(&sub1, "-9.23");
+    initString(&sub2, "2");
+    char *string, *string2, *string3, *string4, *string5;
     string = toStringExp(&number6, 10);
     string2 = toString(&number6, 5);
     string3 = toString(&number2, 500);
     addBfp(&add1, &add2);
+    subBfp(&sub1, &sub2);
     string4 = toString(&add1, 2);
+    string5 = toString(&sub1, 2);
     printf("%s\n", string);
     printf("%s\n", string2);
     printf("%s\n", string3);
     printf("%s\n", string4);
+    printf("%s\n", string5);
     printf("Done yay\n");
 }

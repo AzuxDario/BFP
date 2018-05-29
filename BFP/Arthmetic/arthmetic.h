@@ -49,4 +49,11 @@ void addLongLong(bfp* value1, long long value2);
   \param value value to negate.
 */
 void negBfp(bfp* value);
+
+//! Subtract second value from first value.
+/*!
+  \param value1 minuend.
+  \param value2 subtrahend.
+*/
+void subBfp(bfp* value1, bfp* value2);
 #endif // ARTHMETIC_H

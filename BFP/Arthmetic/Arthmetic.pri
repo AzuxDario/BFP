@@ -7,7 +7,8 @@ SOURCES += \
     $$PWD/addDouble.c \
     $$PWD/addFloat.c \
     $$PWD/addLongLong.c \
-    $$PWD/addInt.c
+    $$PWD/addInt.c \
+    $$PWD/subBfp.c
 
 HEADERS += \ 
     $$PWD/arthmetic.h
