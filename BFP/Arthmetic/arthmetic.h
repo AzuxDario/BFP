@@ -43,6 +43,12 @@ void addInt(bfp* value1, int value2);
 */
 void addLongLong(bfp* value1, long long value2);
 
+//! Multiply first value by second value
+/*!
+  \param value1 factor.
+  \param value2 factor.
+*/
+void mulBfp(bfp* value1, bfp* value2);
 
 //! Negate value.
 /*!
