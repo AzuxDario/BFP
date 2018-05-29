@@ -20,7 +20,7 @@ void addBfp(bfp* value1, bfp* value2)
         initBFP(value1, value2);
     }
 
-    // Values are both positive or negative
+    // Values are both positive
     if(value1->sign == 0 &&  value2->sign == 0)
     {
         if(greatherBfp(value1, value2) == 1)
