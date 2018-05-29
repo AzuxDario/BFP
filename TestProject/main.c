@@ -21,9 +21,9 @@ int main()
     initLongLong(&number6, 123456);
     initString(&numberZero, "0");
     initString(&add1, "9.23");
-    initString(&add2, "2");
-    initString(&sub1, "-9.23");
-    initString(&sub2, "2");
+    initString(&add2, "-2");
+    initString(&sub1, "9.23");
+    initString(&sub2, "-2.92");
     char *string, *string2, *string3, *string4, *string5;
     string = toStringExp(&number6, 10);
     string2 = toString(&number6, 5);
