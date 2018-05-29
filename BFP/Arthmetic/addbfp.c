@@ -6,6 +6,7 @@ void addBfp(bfp* value1, bfp* value2)
 {
     bfp greather, lower;
     char carriage = 0;
+    char sign;
 
     // If value2 is zero, there's nothing to do
     if(isZero(value2))
@@ -20,7 +21,7 @@ void addBfp(bfp* value1, bfp* value2)
     }
 
     // Values are both positive or negative
-    if(value1->sign == value2->sign)
+    if(value1->sign == 0 &&  value2->sign == 0)
     {
         if(greatherBfp(value1, value2) == 1)
         {
