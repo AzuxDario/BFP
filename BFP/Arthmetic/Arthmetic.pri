@@ -13,7 +13,11 @@ SOURCES += \
     $$PWD/subFloat.c \
     $$PWD/subLongLong.c \
     $$PWD/subInt.c \
-    $$PWD/mulBfp.c
+    $$PWD/mulBfp.c \
+    $$PWD/mulDouble.c \
+    $$PWD/mulFloat.c \
+    $$PWD/mulLongLong.c \
+    $$PWD/mulInt.c
 
 HEADERS += \ 
     $$PWD/arthmetic.h

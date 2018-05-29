@@ -50,6 +50,34 @@ void addLongLong(bfp* value1, long long value2);
 */
 void mulBfp(bfp* value1, bfp* value2);
 
+//! Multiply first value by second value
+/*!
+  \param value1 factor.
+  \param value2 factor.
+*/
+void mulDouble(bfp* value1, double value2);
+
+//! Multiply first value by second value
+/*!
+  \param value1 factor.
+  \param value2 factor.
+*/
+void mulFloat(bfp* value1, float value2);
+
+//! Multiply first value by second value
+/*!
+  \param value1 factor.
+  \param value2 factor.
+*/
+void mulInt(bfp* value1, int value2);
+
+//! Multiply first value by second value
+/*!
+  \param value1 factor.
+  \param value2 factor.
+*/
+void mulLongLong(bfp* value1, long long value2);
+
 //! Negate value.
 /*!
   \param value value to negate.
