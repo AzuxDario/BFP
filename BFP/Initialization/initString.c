@@ -5,6 +5,7 @@ void initString(bfp* target, char* source)
 {
     int position = 0;
     bool isSeparatorDetected = false;
+    bool isSignDetected = false;
     // Assing zero
     initZero(target);
 
@@ -20,11 +21,13 @@ void initString(bfp* target, char* source)
         if(source[i] == '-')
         {
             target->sign = 1;
+            isSignDetected = true;
             continue;
         }
         else if(source[i] == '+')
         {
             target->sign = 0;
+            isSignDetected = true;
             continue;
         }
         // If under index it separator set position of separator
@@ -37,6 +40,12 @@ void initString(bfp* target, char* source)
         //Subtract 0x30 to change value in ascii code to number
         target->significant[position] = source[i] - 0x30;
         position++;
+    }
+
+    // Subtract from separator place 1 when sign was detected
+    if(isSignDetected == true)
+    {
+        target->separatorPlace--;
     }
 
     // Check position of separator
