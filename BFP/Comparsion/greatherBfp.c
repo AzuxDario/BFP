@@ -19,7 +19,11 @@ int greatherBfp(bfp* value1, bfp* value2)
             {
                 return 0;
             }
+            else if(value1->significant[i] > value2->significant[i])
+            {
+                return 1;
+            }
         }
     }
-    return 1;
+    return 0;
 }
