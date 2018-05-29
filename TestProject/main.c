@@ -32,5 +32,5 @@ int main()
     printf("%s\n", string2);
     printf("%s\n", string3);
     printf("%s\n", string4);
-    printf("Done\n");
+    printf("Done yay\n");
 }
