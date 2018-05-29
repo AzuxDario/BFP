@@ -1,12 +1,11 @@
-#include "BFP.h"
 #include "comparsion.h"
 #include "Initialization.h"
+#include "arthmetic.h"
 
 void addBfp(bfp* value1, bfp* value2)
 {
     bfp greather, lower;
     char carriage = 0;
-    char sign;
 
     // If value2 is zero, there's nothing to do
     if(isZero(value2))
@@ -96,6 +95,53 @@ void addBfp(bfp* value1, bfp* value2)
     else
     {
         // Values have different signs do subtraction
+        if(greatherBfp(value1, value2) == 1)
+        {
+            if(value1->sign == 0 && value2->sign == 1)
+            {
+                // Change sign to +
+                value2->sign = 0;
+
+                subBfp(value1, value2);
+                // Restore sign
+                value2->sign = 1;
+            }
+            //value1->sign == 1 && value2->sign == 0
+            else
+            {
+                // Change sign to +
+                value1->sign = 0;
+
+                subBfp(value1, value2);
+                // Restore sign and value should be negative
+                value1->sign = 1;
+            }
+        }
+        else
+        {
+            if(value1->sign == 0 && value2->sign == 1)
+            {
+                // Change sign to +
+                value2->sign = 0;
+
+                subBfp(value1, value2);
+                // Restore sign
+                value2->sign = 1;
+                // Value should be negative
+                value1->sign = 1;
+            }
+            //value1->sign == 1 && value2->sign == 0
+            else
+            {
+                // Change sign to +
+                value1->sign = 0;
+
+                subBfp(value1, value2);
+                // Value should be positive
+                value1->sign = 0;
+            }
+        }
+
     }
 
 }
