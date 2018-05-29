@@ -20,7 +20,7 @@ int main()
     initFloat(&number5, value);
     initLongLong(&number6, 123456);
     initString(&numberZero, "0");
-    initString(&add1, "1.23");
+    initString(&add1, "9.23");
     initString(&add2, "2");
     char *string, *string2, *string3, *string4;
     string = toStringExp(&number6, 10);
