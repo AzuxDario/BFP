@@ -127,4 +127,9 @@ void subBfp(bfp* value1, bfp* value2)
 
     }
 
+    if(isZero(value1) == 1)
+    {
+        value1->sign = 0;
+    }
+
 }

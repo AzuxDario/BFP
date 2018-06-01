@@ -1,5 +1,6 @@
 #include "arthmetic.h"
 #include "Initialization.h"
+#include "comparsion.h"
 
 void mulBfp(bfp* value1, bfp* value2)
 {
@@ -82,4 +83,9 @@ void mulBfp(bfp* value1, bfp* value2)
     normalization(&result);
 
     initBFP(value1, &result);
+
+    if(isZero(value1) == 1)
+    {
+        value1->sign = 0;
+    }
 }
