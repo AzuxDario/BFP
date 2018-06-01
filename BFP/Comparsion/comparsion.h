@@ -2,7 +2,25 @@
 #define COMPARSION_H
 #include "BFP.h"
 
-//! Check if valiue equal zero.
+//! Check if value is NaN.
+/*!
+  \param value value to check.
+*/
+int isNaN(bfp* value);
+
+//! Check if value is -Inf.
+/*!
+  \param value value to check.
+*/
+int isNegativeInf(bfp* value);
+
+//! Check if value is +Inf.
+/*!
+  \param value value to check.
+*/
+int isPositiveInf(bfp* value);
+
+//! Check if value equal zero.
 /*!
   \param value value to check.
 */
