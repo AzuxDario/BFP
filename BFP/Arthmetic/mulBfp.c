@@ -68,7 +68,42 @@ void mulBfp(bfp* value1, bfp* value2)
     }
 
     // Add exponents
-    result.exponent = value1->exponent + value2->exponent;
+    int sum = value1->exponent + value2->exponent;
+
+    // Check if we have Inf
+    if(value1->exponent > 0 && value2->exponent > 0)
+    {
+        if(sum < value1->exponent && sum < value2->exponent)
+        {
+            // NaN or Inf
+            value1->separatorPlace = 1;
+            value1->exponent = bfpExponentMaxValue;
+            // In Inf we should make sure every value will be zero
+            for(int i = 0; i < bfpSignificantArraySize; i++)
+            {
+                value1->significant[i] = 0;
+            }
+            return;
+        }
+    }
+    else if(value1->exponent < 0 && value2->exponent < 0)
+    {
+        if(sum > value1->exponent && sum > value2->exponent)
+        {
+            // NaN or Inf
+            value1->separatorPlace = 1;
+            value1->exponent = bfpExponentMinValue;
+            // In Inf we should make sure every value will be zero
+            for(int i = 0; i < bfpSignificantArraySize; i++)
+            {
+                value1->significant[i] = 0;
+            }
+            return;
+        }
+    }
+
+    // If we haven't Inf, let's go
+    result.exponent = sum;
 
     // Go over all numbers
     for(int i = bfpSignificantArraySize; i >= 0; i--)
