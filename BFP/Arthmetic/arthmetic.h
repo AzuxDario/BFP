@@ -167,4 +167,10 @@ void subInt(bfp* value1, int value2);
   \param value2 subtrahend.
 */
 void subLongLong(bfp* value1, long long value2);
+
+//! Calculate square root.
+/*!
+  \param value value to calculate.
+*/
+void sqrtBfp(bfp* value1);
 #endif // ARTHMETIC_H

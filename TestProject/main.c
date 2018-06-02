@@ -12,7 +12,7 @@ int main()
     result = fun(a, b);
     printf("Wynik: %d\n", result);
     float value = 1.2345f;
-    bfp number, number2, number3, number4, number5, number6, numberZero, add1, add2, sub1, sub2, mul1, mul2, div1, div2, pow;
+    bfp number, number2, number3, number4, number5, number6, numberZero, add1, add2, sub1, sub2, mul1, mul2, div1, div2, pow, sqrt;
     initString(&number, "12.34567890");
     initString(&number2, "0.00123");
     initStringExp(&number3, "0.00123", -1);
@@ -29,7 +29,8 @@ int main()
     initString(&div1, "1");
     initString(&div2, "10");
     initString(&pow, "2");
-    char *string, *string2, *string3, *string4, *string5, *string6, *string7, *string8;;
+    initString(&sqrt, "9");
+    char *string, *string2, *string3, *string4, *string5, *string6, *string7, *string8, *string9;
     string = toStringExp(&number6, 10);
     string2 = toString(&number6, 5);
     string3 = toString(&number2, 500);
@@ -38,11 +39,13 @@ int main()
     mulBfp(&mul1, &mul2);
     divBfp(&div1, &div2);
     powLongLong(&pow, 4);
+    sqrtBfp(&sqrt);
     string4 = toString(&add1, 2);
     string5 = toString(&sub1, 2);
     string6 = toString(&mul1, 6);
     string7 = toString(&div1, 4);
     string8 = toString(&pow, 4);
+    string9 = toString(&sqrt, bfpSignificantArraySize);
     printf("%s\n", string);
     printf("%s\n", string2);
     printf("%s\n", string3);
@@ -51,5 +54,6 @@ int main()
     printf("%s\n", string6);
     printf("%s\n", string7);
     printf("%s\n", string8);
+    printf("%s\n", string9);
     printf("Done yay\n");
 }
