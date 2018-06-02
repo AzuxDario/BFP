@@ -7,6 +7,25 @@ void addBfp(bfp* value1, bfp* value2)
     bfp greather, lower;
     char carriage = 0;
 
+    // Handle NaN and Inf combinations
+    if(isNaN(value1))
+    {
+        return;
+    }
+    else if(isNaN(value2))
+    {
+        initBFP(value1, value2);
+        return;
+    }
+    else if((isPositiveInf(value1) && isNegativeInf(value2)) || (isNegativeInf(value1) && isPositiveInf(value2)))
+    {
+        value1->exponent = bfpExponentMaxValue;
+        // NaN should have at least one digit different than 0
+        value1->significant[0] = 1;
+        return;
+    }
+    // End of NaN and Inf combinations
+
     // If value2 is zero, there's nothing to do
     if(isZero(value2))
     {
@@ -84,6 +103,18 @@ void addBfp(bfp* value1, bfp* value2)
             // Assign carry.
             greather.significant[0] = carriage;
             carriage = 0;
+
+            // Check if we have Inf
+            if(greather.exponent == bfpExponentMaxValue)
+            {
+                // Inf
+                greather.separatorPlace = 1;
+                // In Inf we should make sure every value will be zero
+                for(int i = 0; i < bfpSignificantArraySize; i++)
+                {
+                    greather.significant[i] = 0;
+                }
+            }
 
         }
 
