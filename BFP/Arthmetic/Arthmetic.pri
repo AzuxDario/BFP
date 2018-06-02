@@ -22,7 +22,9 @@ SOURCES += \
     $$PWD/divDouble.c \
     $$PWD/divFloat.c \
     $$PWD/divLongLong.c \
-    $$PWD/divInt.c
+    $$PWD/divInt.c \
+    $$PWD/powLongLong.c \
+    $$PWD/powInt.c
 
 HEADERS += \ 
     $$PWD/arthmetic.h
