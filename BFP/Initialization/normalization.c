@@ -3,11 +3,16 @@
 
 void normalization(bfp* value)
 {
-    // Check if we have NaN or Inf
+    // Check if we have Inf
     if(value->exponent == bfpExponentMinValue || value->exponent == bfpExponentMaxValue)
     {
-        // NaN or Inf
+        // Inf
         value->separatorPlace = 1;
+        // In Inf we should make sure every value will be zero
+        for(int i = 0; i < bfpSignificantArraySize; i++)
+        {
+            value->significant[i] = 0;
+        }
         return;
     }
     //Move separator to first place.
@@ -15,10 +20,14 @@ void normalization(bfp* value)
     {
         value->exponent--;
         value->separatorPlace = 1;
-        // Check if after this operation we have NaN or Inf
+        // Check if after this operation we have Inf
         if(value->exponent == bfpExponentMinValue)
         {
-            // NaN or Inf
+            // In Inf we should make sure every value will be zero
+            for(int i = 0; i < bfpSignificantArraySize; i++)
+            {
+                value->significant[i] = 0;
+            }
             return;
         }
     }
@@ -69,10 +78,14 @@ void normalization(bfp* value)
         value->significant[bfpSignificantArraySize - 1] = 0;
         value->exponent--;
 
-        // Check if after this operation we have NaN or Inf
+        // Check if after this operation we have Inf
         if(value->exponent == bfpExponentMinValue)
         {
-            // NaN or Inf
+            // In Inf we should make sure every value will be zero
+            for(int i = 0; i < bfpSignificantArraySize; i++)
+            {
+                value->significant[i] = 0;
+            }
             return;
         }
     }

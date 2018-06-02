@@ -15,7 +15,7 @@ int main()
     bfp number, number2, number3, number4, number5, number6, numberZero, add1, add2, sub1, sub2, mul1, mul2;
     initString(&number, "12.34567890");
     initString(&number2, "0.00123");
-    initStringExp(&number3, "0.00123", bfpExponentMinValue + 1);
+    initStringExp(&number3, "0.00123", -1);
     initString(&number4, "12");
     initFloat(&number5, value);
     initLongLong(&number6, 123456);

@@ -1,5 +1,7 @@
 #include "Conversion.h"
+#include "comparsion.h"
 #include <stdlib.h>
+#include <string.h>
 
 
 char* toString(bfp* value, unsigned int precision)
@@ -8,6 +10,26 @@ char* toString(bfp* value, unsigned int precision)
     unsigned int indexOfResult = 0;
     unsigned int indexOfValue = 0;
     unsigned int sizeOf = 0;
+
+    // Chekc inf we have NaN or Inf
+    if(isNaN(value))
+    {
+        result = malloc(sizeof(char) * 4);
+        strcpy (result,"NaN");
+        return result;
+    }
+    else if(isPositiveInf(value))
+    {
+        result = malloc(sizeof(char) * 5);
+        strcpy (result,"+Inf");
+        return result;
+    }
+    else if(isNegativeInf(value))
+    {
+        result = malloc(sizeof(char) * 5);
+        strcpy (result,"-Inf");
+        return result;
+    }
 
     // If value is higher or equal 1.
     if(value->exponent >= 0)
