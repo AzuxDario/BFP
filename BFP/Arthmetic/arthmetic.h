@@ -50,6 +50,34 @@ void addLongLong(bfp* value1, long long value2);
 */
 void divBfp(bfp* value1, bfp* value2);
 
+//! Divide first value by second value
+/*!
+  \param value1 dividend.
+  \param value2 divider.
+*/
+void divDouble(bfp* value1, double value2);
+
+//! Divide first value by second value
+/*!
+  \param value1 dividend.
+  \param value2 divider.
+*/
+void divFloat(bfp* value1, float value2);
+
+//! Divide first value by second value
+/*!
+  \param value1 dividend.
+  \param value2 divider.
+*/
+void divInt(bfp* value1, int value2);
+
+//! Divide first value by second value
+/*!
+  \param value1 dividend.
+  \param value2 divider.
+*/
+void divLongLong(bfp* value1, long long value2);
+
 //! Multiply first value by second value
 /*!
   \param value1 factor.

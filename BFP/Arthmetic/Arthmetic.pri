@@ -18,7 +18,11 @@ SOURCES += \
     $$PWD/mulFloat.c \
     $$PWD/mulLongLong.c \
     $$PWD/mulInt.c \
-    $$PWD/divBfp.c
+    $$PWD/divBfp.c \
+    $$PWD/divDouble.c \
+    $$PWD/divFloat.c \
+    $$PWD/divLongLong.c \
+    $$PWD/divInt.c
 
 HEADERS += \ 
     $$PWD/arthmetic.h
