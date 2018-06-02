@@ -43,6 +43,13 @@ void addInt(bfp* value1, int value2);
 */
 void addLongLong(bfp* value1, long long value2);
 
+//! Divide first value by second value
+/*!
+  \param value1 dividend.
+  \param value2 divider.
+*/
+void divBfp(bfp* value1, bfp* value2);
+
 //! Multiply first value by second value
 /*!
   \param value1 factor.
