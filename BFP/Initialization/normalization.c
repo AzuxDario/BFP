@@ -3,14 +3,36 @@
 
 void normalization(bfp* value)
 {
+    // Check if we have NaN or Inf
+    if(value->exponent == bfpExponentMinValue || value->exponent == bfpExponentMaxValue)
+    {
+        // NaN or Inf
+        value->separatorPlace = 1;
+        return;
+    }
     //Move separator to first place.
     if(value->separatorPlace == 0)
     {
         value->exponent--;
         value->separatorPlace = 1;
+        // Check if after this operation we have NaN or Inf
+        if(value->exponent == bfpExponentMinValue)
+        {
+            // NaN or Inf
+            return;
+        }
     }
     else if(value->separatorPlace != 1)
     {
+        int sum = value->exponent + (value->separatorPlace - 1);
+        // Check if we had overflow
+        if(sum < value->exponent && sum < (value->separatorPlace -1))
+        {
+            // NaN or Inf
+            value->separatorPlace = 1;
+            value->exponent = bfpExponentMaxValue;
+            return;
+        }
         value->exponent += (value->separatorPlace - 1);
         value->separatorPlace = 1;
     }
@@ -46,5 +68,12 @@ void normalization(bfp* value)
         //Assign last zero.
         value->significant[bfpSignificantArraySize - 1] = 0;
         value->exponent--;
+
+        // Check if after this operation we have NaN or Inf
+        if(value->exponent == bfpExponentMinValue)
+        {
+            // NaN or Inf
+            return;
+        }
     }
 }
