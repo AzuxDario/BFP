@@ -27,4 +27,6 @@ void initStringExp(bfp* target, char* source, int exponent)
         }
     }
 
+    target->exponent = sum;
+
 }
