@@ -18,5 +18,9 @@ void powLongLong(bfp* value1, long long value2)
     {
         mulBfp(&temp, value1);
     }
+    if(value2 == 0)
+    {
+        initString(&temp, "1");
+    }
     initBFP(value1, &temp);
 }
