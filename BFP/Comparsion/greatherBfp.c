@@ -14,6 +14,10 @@ int greatherBfp(bfp* value1, bfp* value2)
     {
         return 0;
     }
+    else if(value1->exponent > value2->exponent)
+    {
+        return 1;
+    }
     else if(value1->exponent == value2->exponent)
     {
         for(int i = 0; i < bfpSignificantArraySize; i++)
