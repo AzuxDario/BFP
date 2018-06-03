@@ -25,7 +25,8 @@ SOURCES += \
     $$PWD/divInt.c \
     $$PWD/powLongLong.c \
     $$PWD/powInt.c \
-    $$PWD/sqrtBfp.c
+    $$PWD/sqrtBfp.c \
+    $$PWD/factInt.c
 
 HEADERS += \ 
     $$PWD/arthmetic.h
