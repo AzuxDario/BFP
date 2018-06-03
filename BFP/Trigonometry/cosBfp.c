@@ -2,6 +2,7 @@
 #include "Initialization.h"
 #include "comparsion.h"
 #include "arthmetic.h"
+#include "Power.h"
 #include <math.h>
 
 void cosBfp(bfp* value)

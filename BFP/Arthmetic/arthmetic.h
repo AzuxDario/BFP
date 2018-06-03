@@ -126,20 +126,6 @@ void mulLongLong(bfp* value1, long long value2);
 */
 void negBfp(bfp* value);
 
-//! Multiply first value by second value
-/*!
-  \param value1 base.
-  \param value2 exponent.
-*/
-void powInt(bfp* value1, int value2);
-
-//! Multiply first value by second value
-/*!
-  \param value1 base.
-  \param value2 exponent.
-*/
-void powLongLong(bfp* value1, long long value2);
-
 //! Subtract second value from first value.
 /*!
   \param value1 minuend.
@@ -174,10 +160,4 @@ void subInt(bfp* value1, int value2);
   \param value2 subtrahend.
 */
 void subLongLong(bfp* value1, long long value2);
-
-//! Calculate square root.
-/*!
-  \param value value to calculate.
-*/
-void sqrtBfp(bfp* value1);
 #endif // ARTHMETIC_H

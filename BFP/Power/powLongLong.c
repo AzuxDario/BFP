@@ -1,4 +1,5 @@
 #include "arthmetic.h"
+#include "Power.h"
 #include "Initialization.h"
 
 void powLongLong(bfp* value1, long long value2)

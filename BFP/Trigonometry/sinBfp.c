@@ -2,7 +2,8 @@
 #include "Initialization.h"
 #include "arthmetic.h"
 #include "comparsion.h"
-#include "math.h"
+#include "Power.h"
+#include <math.h>
 
 void sinBfp(bfp* value)
 {

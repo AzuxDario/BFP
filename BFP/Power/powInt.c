@@ -1,4 +1,4 @@
-#include "arthmetic.h"
+#include "Power.h"
 
 void powInt(bfp* value1, int value2)
 {

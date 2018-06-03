@@ -23,9 +23,6 @@ SOURCES += \
     $$PWD/divFloat.c \
     $$PWD/divLongLong.c \
     $$PWD/divInt.c \
-    $$PWD/powLongLong.c \
-    $$PWD/powInt.c \
-    $$PWD/sqrtBfp.c \
     $$PWD/factInt.c
 
 HEADERS += \ 

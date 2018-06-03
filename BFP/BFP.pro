@@ -26,6 +26,7 @@ include(Arthmetic/Arthmetic.pri)
 include(Comparsion/Comparsion.pri)
 include(Conversion/Conversion.pri)
 include(Initialization/Initialization.pri)
+include(Power/Power.pri)
 include(Trigonometry/Trigonometry.pri)
 
 SOURCES += \

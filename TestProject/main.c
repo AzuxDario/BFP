@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include "BFP.h"
+#include "Trigonometry/Trigonometry.h"
+#include "Arthmetic/arthmetic.h"
+#include "Power/Power.h"
 #include "Initialization/Initialization.h"
 #include "Conversion/Conversion.h"
-#include "Arthmetic/arthmetic.h"
-#include "Trigonometry/Trigonometry.h"
 
 int main()
 {

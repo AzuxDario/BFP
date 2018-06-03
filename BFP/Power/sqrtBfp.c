@@ -1,4 +1,5 @@
 #include "arthmetic.h"
+#include "Power.h"
 #include "Initialization.h"
 
 void sqrtBfp (bfp* value1)
