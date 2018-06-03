@@ -3,6 +3,7 @@
 #include "Initialization/Initialization.h"
 #include "Conversion/Conversion.h"
 #include "Arthmetic/arthmetic.h"
+#include "Trigonometry/Trigonometry.h"
 
 int main()
 {
@@ -12,7 +13,7 @@ int main()
     result = fun(a, b);
     printf("Wynik: %d\n", result);
     float value = 1.2345f;
-    bfp number, number2, number3, number4, number5, number6, numberZero, add1, add2, sub1, sub2, mul1, mul2, div1, div2, pow, sqrt, fact;
+    bfp number, number2, number3, number4, number5, number6, numberZero, add1, add2, sub1, sub2, mul1, mul2, div1, div2, pow, sqrt, fact, sin;
     initString(&number, "12.34567890");
     initString(&number2, "0.00123");
     initStringExp(&number3, "0.00123", -1);
@@ -20,8 +21,8 @@ int main()
     initFloat(&number5, value);
     initLongLong(&number6, 123456);
     initString(&numberZero, "0");
-    initString(&add1, "9.23");
-    initString(&add2, "-2");
+    initString(&add1, "0");
+    initString(&add2, "0.5");
     initString(&sub1, "9.23");
     initString(&sub2, "-2.92");
     initString(&mul1, "9.23");
@@ -30,7 +31,8 @@ int main()
     initString(&div2, "10");
     initString(&pow, "2");
     initString(&sqrt, "9");
-    char *string, *string2, *string3, *string4, *string5, *string6, *string7, *string8, *string9, *string10;
+    initString(&sin, "0.5");
+    char *string, *string2, *string3, *string4, *string5, *string6, *string7, *string8, *string9, *string10, *string11;
     string = toStringExp(&number6, 10);
     string2 = toString(&number6, 5);
     string3 = toString(&number2, 500);
@@ -41,6 +43,7 @@ int main()
     powLongLong(&pow, 4);
     factInt(&fact, 5);
     sqrtBfp(&sqrt);
+    sinBfp(&sin);
     string4 = toString(&add1, 2);
     string5 = toString(&sub1, 2);
     string6 = toString(&mul1, 6);
@@ -48,15 +51,17 @@ int main()
     string8 = toString(&pow, 4);
     string9 = toString(&sqrt, bfpSignificantArraySize);
     string10 = toString(&fact, 0);
+    string11 = toString(&sin, bfpSignificantArraySize - 1);
     printf("%s\n", string);
     printf("%s\n", string2);
     printf("%s\n", string3);
-    printf("%s\n", string4);
-    printf("%s\n", string5);
-    printf("%s\n", string6);
-    printf("%s\n", string7);
-    printf("%s\n", string8);
-    printf("%s\n", string9);
-    printf("%s\n", string10);
+    printf("Add: %s\n", string4);
+    printf("Sub: %s\n", string5);
+    printf("Mul: %s\n", string6);
+    printf("Div: %s\n", string7);
+    printf("Pow: %s\n", string8);
+    printf("Sqrt: %s\n", string9);
+    printf("Fact: %s\n", string10);
+    printf("Sin: %s\n", string11);
     printf("Done yay\n");
 }
