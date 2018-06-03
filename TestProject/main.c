@@ -13,7 +13,7 @@ int main()
     result = fun(a, b);
     printf("Wynik: %d\n", result);
     float value = 1.2345f;
-    bfp number, number2, number3, number4, number5, number6, numberZero, add1, add2, sub1, sub2, mul1, mul2, div1, div2, pow, sqrt, fact, sin;
+    bfp number, number2, number3, number4, number5, number6, numberZero, add1, add2, sub1, sub2, mul1, mul2, div1, div2, pow, sqrt, fact, sin, cos;
     initString(&number, "12.34567890");
     initString(&number2, "0.00123");
     initStringExp(&number3, "0.00123", -1);
@@ -32,7 +32,8 @@ int main()
     initString(&pow, "2");
     initString(&sqrt, "9");
     initString(&sin, "0.5");
-    char *string, *string2, *string3, *string4, *string5, *string6, *string7, *string8, *string9, *string10, *string11;
+    initString(&cos, "0.5");
+    char *string, *string2, *string3, *string4, *string5, *string6, *string7, *string8, *string9, *string10, *string11, *string12;
     string = toStringExp(&number6, 10);
     string2 = toString(&number6, 5);
     string3 = toString(&number2, 500);
@@ -44,6 +45,7 @@ int main()
     factInt(&fact, 5);
     sqrtBfp(&sqrt);
     sinBfp(&sin);
+    cosBfp(&cos);
     string4 = toString(&add1, 2);
     string5 = toString(&sub1, 2);
     string6 = toString(&mul1, 6);
@@ -52,6 +54,7 @@ int main()
     string9 = toString(&sqrt, bfpSignificantArraySize);
     string10 = toString(&fact, 0);
     string11 = toString(&sin, bfpSignificantArraySize - 1);
+    string12 = toString(&cos, bfpSignificantArraySize - 1);
     printf("%s\n", string);
     printf("%s\n", string2);
     printf("%s\n", string3);
@@ -63,5 +66,6 @@ int main()
     printf("Sqrt: %s\n", string9);
     printf("Fact: %s\n", string10);
     printf("Sin: %s\n", string11);
+    printf("Cos: %s\n", string12);
     printf("Done yay\n");
 }
