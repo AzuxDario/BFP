@@ -8,6 +8,12 @@
 */
 void cosBfp(bfp* value);
 
+//! Calculate cotangens.
+/*!
+  \param value value calculate.
+*/
+void ctanBfp(bfp* value);
+
 //! Calculate tangens.
 /*!
   \param value value calculate.
