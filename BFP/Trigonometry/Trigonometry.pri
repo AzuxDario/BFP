@@ -2,7 +2,8 @@ INCLUDEPATH += Trigonometry
 DEPENDPATH += Trigonometry
 SOURCES += \ 
     $$PWD/cosBfp.c \
-    $$PWD/sinBfp.c
+    $$PWD/sinBfp.c \
+    $$PWD/tanBfp.c
 
 HEADERS += \ 
     $$PWD/Trigonometry.h

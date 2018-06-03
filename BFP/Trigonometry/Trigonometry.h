@@ -8,6 +8,12 @@
 */
 void cosBfp(bfp* value);
 
+//! Calculate tangens.
+/*!
+  \param value value calculate.
+*/
+void tanBfp(bfp* value);
+
 //! Calculate sinus.
 /*!
   \param value value calculate.
