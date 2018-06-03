@@ -36,6 +36,7 @@ void addBfp(bfp* value1, bfp* value2)
     if(isZero(value1))
     {
         initBFP(value1, value2);
+        return;
     }
 
     // Values are both positive or negative

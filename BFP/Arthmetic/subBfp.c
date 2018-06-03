@@ -39,6 +39,7 @@ void subBfp(bfp* value1, bfp* value2)
         initBFP(value1, value2);
         // Negate value because it's subtraction
         negBfp(value1);
+        return;
     }
 
     initZero(&result);
