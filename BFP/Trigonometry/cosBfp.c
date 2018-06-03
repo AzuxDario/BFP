@@ -32,7 +32,7 @@ void cosBfp(bfp* value)
     int exponent = 0;
     initZero(&result);
 
-    for(int i = 0; i < 10; i++)
+    for(int i = 0; i < 20; i++)
     {
         exponent = 2 * i;
         initBFP(&dividend, &tempValue);
