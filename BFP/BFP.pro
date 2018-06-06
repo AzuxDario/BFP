@@ -28,6 +28,7 @@ include(Conversion/Conversion.pri)
 include(ExponentialAndLogarithmic/ExponentialAndLogarithmic.pri)
 include(Initialization/Initialization.pri)
 include(Power/Power.pri)
+include(Round/Round.pri)
 include(Trigonometry/Trigonometry.pri)
 
 SOURCES += \
