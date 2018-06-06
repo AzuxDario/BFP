@@ -5,8 +5,9 @@ Library provides 256 byte floating point type and operations. Library provides:
  * Convertion to string.
  * Comparsion between BFP variables.
  * Arthmetic operations.
- * Power operations.
  * Exponential and logarithm operations.
+ * Power operations.
+ * Round functions.
  * Trygonometric operations.
  
 # Functions
@@ -92,6 +93,17 @@ For example
 ```
 powLongLong(&pow, 4);
 sqrtBfp(&sqrt);
+```
+
+## Round
+ * round
+ * ceil
+ * floor
+ 
+For example
+```
+initString(&round, "2.3")
+roundBfp(&round);
 ```
 
 ## Trigonometry
