@@ -8,4 +8,10 @@
 */
 void expBfp(bfp* value);
 
+//! Calculate natural logarythm.
+/*!
+  \param value value calculate.
+*/
+void logBfp(bfp* value);
+
 #endif // EXPONENTIALANDLOGARITHMIC_H

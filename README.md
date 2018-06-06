@@ -32,7 +32,7 @@ initFloat(&number3, value);
 
 ## Arthmetic
  * addition
- * subutraction
+ * subtraction
  * multiplication
  * division
  * factorial
@@ -76,6 +76,7 @@ string2 = toStringExp(&sub1, 2);
 
 ## Exponential and Logarithmic
  * natural exponential function 
+ * natural logarythm
  
 For example
 ```
