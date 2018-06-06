@@ -77,6 +77,7 @@ string2 = toStringExp(&sub1, 2);
 ## Exponential and Logarithmic
  * natural exponential function 
  * natural logarythm
+ * common logarythm
  
 For example
 ```
