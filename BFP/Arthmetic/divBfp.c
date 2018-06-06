@@ -121,7 +121,7 @@ void divBfp(bfp* value1, bfp* value2)
                 resultTemp.significant[j] += tempVal1.significant[j] - tempVal2.significant[j];
 
                 // If there was borrow from current value and it's lower than 0, borrow from previous one
-                if(resultTemp.significant[j] < 0 && i > 0)
+                if(resultTemp.significant[j] < 0 && j > 0)
                 {
                     resultTemp.significant[j-1]--;
                     resultTemp.significant[j] += 10;
