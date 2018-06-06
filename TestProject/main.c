@@ -15,7 +15,7 @@
         result = fun(a, b);
         printf("Wynik: %d\n", result);
         float value = 1.2345f;
-        bfp number, number2, number3, number4, number5, number6, numberZero, add1, add2, sub1, sub2, mul1, mul2, div1, div2, pow, sqrt, fact, sin, cos, tan, ctan, exp, log;
+        bfp number, number2, number3, number4, number5, number6, numberZero, add1, add2, sub1, sub2, mul1, mul2, div1, div2, pow, sqrt, fact, sin, cos, tan, ctan, exp, log, log10;
         initString(&number, "12.34567890");
         initString(&number2, "0.00123");
         initStringExp(&number3, "0.00123", -1);
@@ -39,7 +39,8 @@
         initString(&ctan, "0.5");
         initString(&exp, "5");
         initString(&log, "1.5");
-        char *string, *string2, *string3, *string4, *string5, *string6, *string7, *string8, *string9, *string10, *string11, *string12, *string13, *string14, *string15, *string16;
+        initString(&log10, "10");
+        char *string, *string2, *string3, *string4, *string5, *string6, *string7, *string8, *string9, *string10, *string11, *string12, *string13, *string14, *string15, *string16, *string17;
         string = toStringExp(&number6, 10);
         string2 = toString(&number6, 5);
         string3 = toString(&number2, 500);
@@ -56,6 +57,7 @@
         ctanBfp(&ctan);
         expBfp(&exp);
         logBfp(&log);
+        log10Bfp(&log10);
         string4 = toString(&add1, 2);
         string5 = toString(&sub1, 2);
         string6 = toString(&mul1, 6);
@@ -69,6 +71,7 @@
         string14 = toString(&ctan, bfpSignificantArraySize - 1);
         string15 = toString(&exp, bfpSignificantArraySize - 1);
         string16 = toString(&log, bfpSignificantArraySize - 1);
+        string17 = toString(&log10, bfpSignificantArraySize - 1);
         printf("%s\n", string);
         printf("%s\n", string2);
         printf("%s\n", string3);
@@ -85,5 +88,6 @@
         printf("Ctan: %s\n", string14);
         printf("Exp: %s\n", string15);
         printf("Log: %s\n", string16);
+        printf("Log10: %s\n", string17);
         printf("Done yay\n");
     }

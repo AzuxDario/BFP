@@ -8,6 +8,12 @@
 */
 void expBfp(bfp* value);
 
+//! Calculate common logarythm.
+/*!
+  \param value value calculate.
+*/
+void log10Bfp(bfp* value);
+
 //! Calculate natural logarythm.
 /*!
   \param value value calculate.
