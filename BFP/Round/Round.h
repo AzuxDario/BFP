@@ -8,6 +8,12 @@
 */
 void ceilBfp(bfp* value);
 
+//! Rounds x downward, returning the largest integral value that is not greater than x.
+/*!
+  \param value value to ceil.
+*/
+void floorBfp(bfp* value);
+
 //! Returns the integral value that is nearest to x, with halfway cases rounded away from zero.
 /*!
   \param value value to ceil.
