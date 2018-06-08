@@ -88,6 +88,9 @@ expBfp(&exp);
 
 ## Hyperbolic
  * hyperbolic cosinus
+ * hyperbolic sinus
+ * hyperbolic tangent
+ * hyperbolic cotangent
  
 For example
 ```
@@ -118,8 +121,8 @@ roundBfp(&round);
 ## Trigonometry
  * sinus
  * cosinus
- * tangens
- * cotangens
+ * tangent
+ * cotangent
  
  For example
 ```
