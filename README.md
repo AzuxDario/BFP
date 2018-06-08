@@ -4,6 +4,7 @@ Library provides 256 byte floating point type and operations. Library provides:
  * Initialization from double, float, long long, int and char* type.
  * Convertion to string.
  * Comparsion between BFP variables.
+ * Cyclometric functions
  * Arthmetic operations.
  * Exponential and logarithm operations.
  * Hyperbolic operations.
@@ -75,6 +76,14 @@ For example
 ```
 string1 = toString(&add1, 2);
 string2 = toStringExp(&sub1, 2);
+```
+
+## Cyclometric
+ * arc sine
+ 
+For example
+```
+asinBfp(&asin);
 ```
 
 ## Exponential and Logarithmic
