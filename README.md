@@ -80,6 +80,7 @@ string2 = toStringExp(&sub1, 2);
 
 ## Cyclometric
  * arc sine
+ * arc cosine
  
 For example
 ```
