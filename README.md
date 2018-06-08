@@ -38,6 +38,7 @@ initFloat(&number3, value);
  * multiplication
  * division
  * factorial
+ * double factorial
  * absolute value
  * sign negation
  

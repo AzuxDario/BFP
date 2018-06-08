@@ -78,6 +78,13 @@ void divInt(bfp* value1, int value2);
 */
 void divLongLong(bfp* value1, long long value2);
 
+//! Calculate double factorial
+/*!
+  \param value1 result.
+  \param value2 nmber to calculate factorial.
+*/
+void doubleFactInt(bfp* value1, unsigned int value2);
+
 //! Calculate factorial
 /*!
   \param value1 result.
