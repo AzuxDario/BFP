@@ -81,6 +81,8 @@ string2 = toStringExp(&sub1, 2);
 ## Cyclometric
  * arc sine
  * arc cosine
+ * arc tangent
+ * arc cotangent
  
 For example
 ```
@@ -98,8 +100,8 @@ expBfp(&exp);
 ```
 
 ## Hyperbolic
- * hyperbolic cosinus
- * hyperbolic sinus
+ * hyperbolic cosine
+ * hyperbolic sine
  * hyperbolic tangent
  * hyperbolic cotangent
  
@@ -130,8 +132,8 @@ roundBfp(&round);
 ```
 
 ## Trigonometry
- * sinus
- * cosinus
+ * sine
+ * cosine
  * tangent
  * cotangent
  

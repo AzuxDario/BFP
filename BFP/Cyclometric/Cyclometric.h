@@ -8,6 +8,12 @@
 */
 void acosBfp(bfp* value);
 
+//! Calculate arc cotangent.
+/*!
+  \param value value calculate.
+*/
+void actanBfp(bfp* value);
+
 //! Calculate arc sine.
 /*!
   \param value value calculate.
