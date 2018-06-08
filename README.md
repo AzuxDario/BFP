@@ -6,6 +6,7 @@ Library provides 256 byte floating point type and operations. Library provides:
  * Comparsion between BFP variables.
  * Arthmetic operations.
  * Exponential and logarithm operations.
+ * Hyperbolic operations.
  * Power operations.
  * Round functions.
  * Trygonometric operations.
@@ -83,6 +84,14 @@ string2 = toStringExp(&sub1, 2);
 For example
 ```
 expBfp(&exp);
+```
+
+## Hyperbolic
+ * hyperbolic cosinus
+ 
+For example
+```
+coshBfp(&cosh);
 ```
 
 ## Power
