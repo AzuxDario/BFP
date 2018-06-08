@@ -33,6 +33,7 @@ void sinBfp(bfp* value)
     int exponent = 0;
     initZero(&result);
 
+    // Calculate using Taylor series
     for(int i = 0; i < 20; i++)
     {
         exponent = 2 * i + 1;
