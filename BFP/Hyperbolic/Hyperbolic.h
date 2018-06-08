@@ -8,4 +8,10 @@
 */
 void coshBfp(bfp* value);
 
+//! Calculate hiperbolic sinus.
+/*!
+  \param value value calculate.
+*/
+void sinhBfp(bfp* value);
+
 #endif // HYPERBOLIC_H
