@@ -14,4 +14,10 @@ void coshBfp(bfp* value);
 */
 void sinhBfp(bfp* value);
 
+//! Calculate hiperbolic tangens.
+/*!
+  \param value value calculate.
+*/
+void tanhBfp(bfp* value);
+
 #endif // HYPERBOLIC_H
