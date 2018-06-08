@@ -1,6 +1,7 @@
 INCLUDEPATH += Cyclometric
 DEPENDPATH += Cyclometric
-SOURCES +=
+SOURCES += \
+    $$PWD/asinBfp.c
 
 HEADERS += \
     $$PWD/Cyclometric.h

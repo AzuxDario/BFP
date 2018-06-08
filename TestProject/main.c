@@ -8,6 +8,7 @@
 #include "ExponentialAndLogarithmic/ExponentialAndLogarithmic.h"
 #include "Round/Round.h"
 #include "Hyperbolic/Hyperbolic.h"
+#include "Cyclometric/Cyclometric.h"
 
 int main()
 {
@@ -18,7 +19,7 @@ int main()
     printf("Wynik: %d\n", result);
     float value = 1.2345f;
     bfp number, number2, number3, number4, number5, number6, numberZero, add1, add2, sub1, sub2, mul1, mul2, div1, div2, pow, sqrt, fact, sin, cos, tan, ctan, exp, log, log10, ceil;
-    bfp round, floor, cosh, dFact1, dFact2;
+    bfp round, floor, cosh, dFact1, dFact2, asin;
     initString(&number, "12.34567890");
     initString(&number2, "0.00123");
     initStringExp(&number3, "0.00123", -1);
@@ -47,8 +48,9 @@ int main()
     initString(&round, "2.3");
     initString(&floor, "2.3");
     initString(&cosh, "2.0");
+    initString(&asin, "0.5");
     char *string, *string2, *string3, *string4, *string5, *string6, *string7, *string8, *string9, *string10, *string11, *string12, *string13, *string14, *string15, *string16;
-    char *string17, *string18, *string19, *string20, *string21, *string22, *string23;
+    char *string17, *string18, *string19, *string20, *string21, *string22, *string23, *string24;
     string = toStringExp(&number6, 10);
     string2 = toString(&number6, 5);
     string3 = toString(&number2, 500);
@@ -64,14 +66,15 @@ int main()
     tanBfp(&tan);
     ctanBfp(&ctan);
     expBfp(&exp);
-    logBfp(&log);
-    log10Bfp(&log10);
+    //logBfp(&log);
+    //log10Bfp(&log10);
     ceilBfp(&ceil);
     roundBfp(&round);
     floorBfp(&floor);
     coshBfp(&cosh);
     doubleFactInt(&dFact1, 4);
     doubleFactInt(&dFact2, 5);
+    asinBfp(&asin);
     string4 = toString(&add1, 2);
     string5 = toString(&sub1, 2);
     string6 = toString(&mul1, 6);
@@ -92,6 +95,7 @@ int main()
     string21 = toString(&cosh, 40);
     string22 = toString(&dFact1, 2);
     string23 = toString(&dFact2, 2);
+    string24 = toString(&asin, 40);
     printf("%s\n", string);
     printf("%s\n", string2);
     printf("%s\n", string3);
@@ -115,5 +119,6 @@ int main()
     printf("Cosh: %s\n", string21);
     printf("Double Factorial: %s\n", string22);
     printf("Double Factorial: %s\n", string23);
+    printf("Asin: %s\n", string24);
     printf("Done yay\n");
 }
