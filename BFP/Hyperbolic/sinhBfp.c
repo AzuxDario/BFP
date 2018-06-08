@@ -3,7 +3,7 @@
 #include "arthmetic.h"
 #include "ExponentialAndLogarithmic.h"
 
-void coshBfp(bfp* value)
+void sinhBfp(bfp* value)
 {
     bfp ePlus, eMinus;
 
