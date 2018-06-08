@@ -8,13 +8,19 @@
 */
 void coshBfp(bfp* value);
 
+//! Calculate hiperbolic contangent.
+/*!
+  \param value value calculate.
+*/
+void tanhBfp(bfp* value);
+
 //! Calculate hiperbolic sinus.
 /*!
   \param value value calculate.
 */
 void sinhBfp(bfp* value);
 
-//! Calculate hiperbolic tangens.
+//! Calculate hiperbolic tangent.
 /*!
   \param value value calculate.
 */
