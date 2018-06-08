@@ -7,10 +7,12 @@
 
 void cosBfp(bfp* value)
 {
-    bfp pi, tempValue, result;
+    bfp pi, minusPi, tempValue, result;
     bfp dividend, divider;
 
     initString(&pi, bfpPi);
+    initString(&minusPi, bfpPi);
+    minusPi.sign = 1;
     initBFP(&tempValue, value);
 
     // Make value between -pi and pi
@@ -23,7 +25,7 @@ void cosBfp(bfp* value)
     }
     else
     {
-        while(lessBfp(&tempValue, &pi))
+        while(lessBfp(&tempValue, &minusPi))
         {
             addBfp(&tempValue, &pi);
         }
