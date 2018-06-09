@@ -2,25 +2,25 @@
 #define TRIGONOMETRY_H
 #include "BFP.h"
 
-//! Calculate cosinus.
+//! Calculate cosine.
 /*!
   \param value value calculate.
 */
 void cosBfp(bfp* value);
 
-//! Calculate cotangens.
+//! Calculate cotangent.
 /*!
   \param value value calculate.
 */
 void ctanBfp(bfp* value);
 
-//! Calculate tangens.
+//! Calculate tangent.
 /*!
   \param value value calculate.
 */
 void tanBfp(bfp* value);
 
-//! Calculate sinus.
+//! Calculate sine.
 /*!
   \param value value calculate.
 */

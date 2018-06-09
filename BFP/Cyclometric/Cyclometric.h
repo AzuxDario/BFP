@@ -26,4 +26,10 @@ void asinBfp(bfp* value);
 */
 void atanBfp(bfp* value);
 
+//! Calculate arc tangent.
+/*!
+  \param value value calculate.
+*/
+void atan2Bfp(bfp* value1, bfp* value2);
+
 #endif // CYCLOMETRIC_H

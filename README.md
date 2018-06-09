@@ -83,6 +83,7 @@ string2 = toStringExp(&sub1, 2);
  * arc cosine
  * arc tangent
  * arc cotangent
+ * arc tangent with two parameters
  
 For example
 ```
