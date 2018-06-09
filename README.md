@@ -7,6 +7,7 @@ Library provides 256 byte floating point type and operations. Library provides:
  * Cyclometric functions
  * Arthmetic operations.
  * Exponential and logarithm operations.
+ * Inverse hyperbolic operations.
  * Hyperbolic operations.
  * Power operations.
  * Round functions.
@@ -111,6 +112,17 @@ For example
 coshBfp(&cosh);
 ```
 
+## Inverse hyperbolic operations.
+ * inverse hyperbolic cosine
+ * inverse hyperbolic sine
+ * inverse hyperbolic tangent
+ * inverse hyperbolic cotangent
+
+For example
+```
+acoshBfp(&acosh);
+```
+ 
 ## Power
  * power
  * square root
