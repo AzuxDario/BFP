@@ -39,13 +39,9 @@ void divBfp(bfp* value1, bfp* value2)
     }
     else if(isZero(value2))
     {
-        // Inf
-        value1->separatorPlace = 1;
-        // In Inf we should make sure every value will be zero
-        for(int i = 0; i < bfpSignificantArraySize; i++)
-        {
-            value1->significant[i] = 0;
-        }
+        value1->exponent = bfpExponentMaxValue;
+        // NaN should have at least one digit different than 0
+        value1->significant[0] = 1;
         return;
     }
     // End of NaN and Inf combinations
