@@ -15,6 +15,5 @@ typedef struct
     char significant[bfpSignificantArraySize]; /*!< significant of number */
 } bfp;
 
-int fun(int a, int b);
 
 #endif // TESTLIBRART_H
