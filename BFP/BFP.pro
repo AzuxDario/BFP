@@ -34,8 +34,7 @@ include(Power/Power.pri)
 include(Round/Round.pri)
 include(Trigonometry/Trigonometry.pri)
 
-SOURCES += \
-        BFP.c
+SOURCES +=
 
 HEADERS += \
         BFP.h \

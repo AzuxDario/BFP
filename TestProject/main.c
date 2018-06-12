@@ -12,11 +12,6 @@
 
 int main()
 {
-    int a, b, result;
-    a = 10;
-    b = 10;
-    result = fun(a, b);
-    printf("Wynik: %d\n", result);
     float value = 1.2345f;
     bfp number, number2, number3, number4, number5, number6, numberZero, add1, add2, sub1, sub2, mul1, mul2, div1, div2, pow, sqrt, fact, sin, cos, tan, ctan, exp, log, log10, ceil;
     bfp round, floor, cosh, dFact1, dFact2, asin;
