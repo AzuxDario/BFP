@@ -2,6 +2,10 @@
 #define INITIALIZATION_H
 #include "BFP.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 //! Initialize variable by BFP value
 /*!
   \param target value to initialize.
@@ -64,5 +68,9 @@ void initZero(bfp* value);
   \param value value to normalize.
 */
 void normalization(bfp* value);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // INITIALIZATION_H

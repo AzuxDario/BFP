@@ -2,6 +2,10 @@
 #define ARTHMETIC_H
 #include "BFP.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 //! Get absolute value.
 /*!
   \param value value to make absolute.
@@ -167,4 +171,9 @@ void subInt(bfp* value1, int value2);
   \param value2 subtrahend.
 */
 void subLongLong(bfp* value1, long long value2);
+
+#ifdef __cplusplus
+}
+#endif
+
 #endif // ARTHMETIC_H

@@ -2,6 +2,10 @@
 #define CONVERSION_H
 #include "BFP.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 //! Convert bfp to string.
 /*!
   \param value value to convert.
@@ -15,5 +19,9 @@ char* toString(bfp* value, unsigned int precision);
   \param precision how many numbers after separator should be shown.
 */
 char* toStringExp(bfp* value, unsigned int precision);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // CONVERSION_H

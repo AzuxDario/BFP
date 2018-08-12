@@ -2,6 +2,10 @@
 #define CYCLOMETRIC_H
 #include "BFP.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 //! Calculate arc cosine.
 /*!
   \param value value calculate.
@@ -31,5 +35,9 @@ void atanBfp(bfp* value);
   \param value value calculate.
 */
 void atan2Bfp(bfp* value1, bfp* value2);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // CYCLOMETRIC_H
