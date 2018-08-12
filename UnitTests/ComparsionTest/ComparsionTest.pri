@@ -1,5 +1,5 @@
-INCLUDEPATH += Comparsion
-DEPENDPATH += Comparsion
+INCLUDEPATH += ComparsionTest
+DEPENDPATH += ComparsionTest
 SOURCES += \ 
     $$PWD/ComparsionTest.cpp
 

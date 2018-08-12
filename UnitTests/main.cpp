@@ -1,9 +1,9 @@
 #include <QtTest>
-//#include "ComparsionTest.h"
+#include "ComparsionTest.h"
 
 int main(int argc, char** argv)
 {
-    //ComparsionTest comparsionTest;
+    ComparsionTest comparsionTest;
 
-    //return QTest::qExec(&comparsionTest, argc, argv);
+    return QTest::qExec(&comparsionTest, argc, argv);
 }
