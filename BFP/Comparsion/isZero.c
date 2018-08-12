@@ -2,12 +2,16 @@
 
 int isZero(bfp* value)
 {
-    for(int i = 0; i <bfpSignificantArraySize; i++)
+    if(value->exponent == 0)
     {
-        if(value->significant[i] != 0)
+        for(int i = 0; i < bfpSignificantArraySize; i++)
         {
-            return 0;
+            if(value->significant[i] != 0)
+            {
+                return 0;
+            }
         }
+        return 1;
     }
-    return 1;
+    return 0;
 }

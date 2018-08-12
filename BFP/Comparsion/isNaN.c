@@ -2,9 +2,16 @@
 
 int isNaN(bfp* value)
 {
-    if(value->exponent == bfpExponentMaxValue && isZero(value) == 0)
+    if(value->exponent == bfpExponentMaxValue)
     {
-        return 1;
+        for(int i = 0; i < bfpSignificantArraySize; i++)
+        {
+            if(value->significant[i] != 0 )
+            {
+                return 1;
+            }
+        }
+        return 0;
     }
     else
     {
