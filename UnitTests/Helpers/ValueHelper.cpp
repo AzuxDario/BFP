@@ -35,7 +35,7 @@ void ValueHelper::assignNegativeInf(bfp* value)
     }
 }
 
-bool ValueHelper::checkValue(bfp* value, Sign sign, int exponent, std::string significant)
+bool ValueHelper::checkValue(bfp* value, Sign sign, std::string significant, int exponent)
 {
     bool returnValue = true;
 
@@ -56,4 +56,24 @@ bool ValueHelper::checkValue(bfp* value, Sign sign, int exponent, std::string si
     }
 
     return returnValue;
+}
+
+bool ValueHelper::checkIsZero(bfp* value)
+{
+    return isZero(value);
+}
+
+bool ValueHelper::checkIsNan(bfp* value)
+{
+    return isNaN(value);
+}
+
+bool ValueHelper::checkIsPosInf(bfp* value)
+{
+    return isPositiveInf(value);
+}
+
+bool ValueHelper::checkIsNegInf(bfp* value)
+{
+    return isNegativeInf(value);
 }

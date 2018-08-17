@@ -3,6 +3,7 @@
 
 #include "string"
 #include "BFP.h"
+#include "Comparsion/comparsion.h"
 
 class ValueHelper
 {
@@ -15,7 +16,13 @@ public:
     static void assignNaN(bfp* value);
     static void assignPositiveInf(bfp* value);
     static void assignNegativeInf(bfp* value);
-    static bool checkValue(bfp* value, Sign sign, int exponent, std::string significant);
+    static bool checkValue(bfp* value, Sign sign, std::string significant, int exponent);
+    // Use functions from library to check if value is NaN or +/- Inf.
+    // We have unit tests to test these functions so we can know if they function properly.
+    static bool checkIsZero(bfp* value);
+    static bool checkIsNan(bfp* value);
+    static bool checkIsPosInf(bfp* value);
+    static bool checkIsNegInf(bfp* value);
 };
 
 #endif // VALUEHELPER_H
