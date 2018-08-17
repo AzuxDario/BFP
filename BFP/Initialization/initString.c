@@ -67,7 +67,7 @@ void initString(bfp* target, char* source)
             target->significant[position] = source[i] - 0x30;
             position++;
         }
-        else if(source[i] < '0' && source[i] > '9')
+        else if(source[i] < '0' || source[i] > '9')
         {
             // NaN
             target->exponent = bfpExponentMaxValue;
