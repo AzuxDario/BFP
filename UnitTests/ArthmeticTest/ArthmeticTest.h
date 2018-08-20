@@ -31,6 +31,21 @@ private slots:
      void addInt_Test();
      void addLongLong_Test();
 
+     void subBfp_PosPosValuesPosResult();
+     void subBfp_PosPosValuesNegResult();
+     void subBfp_PosPosValuesZeroResult();
+     void subBfp_NegNegValuesPosResult();
+     void subBfp_NegNegValuesNegResult();
+     void subBfp_NegNegValuesZeroResult();
+     void subBfp_PosNegValuesPosResult();
+     void subBfp_NegPosValuesNegResult();
+
+     // These functions are based on initialization and subBfp
+     // so not much tests are needed
+     void subDouble_Test();
+     void subFloat_Test();
+     void subInt_Test();
+     void subLongLong_Test();
 };
 
 #endif // ARTHMETICTEST_H
