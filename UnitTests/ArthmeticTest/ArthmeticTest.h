@@ -24,6 +24,13 @@ private slots:
      void addBfp_NegPosValuesNegResult();
      void addBfp_NegPosValuesZeroResult();
 
+     // These functions are based on initialization and addBfp
+     // so not much tests are needed
+     void addDouble_Test();
+     void addFloat_Test();
+     void addInt_Test();
+     void addLongLong_Test();
+
 };
 
 #endif // ARTHMETICTEST_H

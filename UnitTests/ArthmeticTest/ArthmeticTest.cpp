@@ -92,3 +92,35 @@ void ArthmeticTest::addBfp_NegPosValuesZeroResult()
     addBfp(&value1, &value2);
     QCOMPARE(ValueHelper::checkValue(&value1, ValueHelper::Sign::plus, std::string("0") , 0), true);
 }
+
+void ArthmeticTest::addDouble_Test()
+{
+    bfp value;
+    initInt(&value, 15);
+    addDouble(&value, 4);
+    QCOMPARE(ValueHelper::checkValue(&value, ValueHelper::Sign::plus, std::string("19") , 1), true);
+}
+
+void ArthmeticTest::addFloat_Test()
+{
+    bfp value;
+    initInt(&value, 15);
+    addFloat(&value, 4);
+    QCOMPARE(ValueHelper::checkValue(&value, ValueHelper::Sign::plus, std::string("19") , 1), true);
+}
+
+void ArthmeticTest::addInt_Test()
+{
+    bfp value;
+    initInt(&value, 15);
+    addInt(&value, 4);
+    QCOMPARE(ValueHelper::checkValue(&value, ValueHelper::Sign::plus, std::string("19") , 1), true);
+}
+
+void ArthmeticTest::addLongLong_Test()
+{
+    bfp value;
+    initInt(&value, 15);
+    addLongLong(&value, 4);
+    QCOMPARE(ValueHelper::checkValue(&value, ValueHelper::Sign::plus, std::string("19") , 1), true);
+}
