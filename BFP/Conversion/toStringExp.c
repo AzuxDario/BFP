@@ -44,12 +44,20 @@ char* toStringExp(bfp* value, unsigned int precision)
     {
         // One for first number, other one for separator
         sizeOf = 2 + precision + 1;
+        if(precision == 0)
+        {
+            sizeOf--;
+        }
         result = malloc(sizeof (char) * sizeOf);
     }
     else
     {
         // One for minus sign other one for first number, and other one for separator
         sizeOf = 3 + precision + 1;
+        if(precision == 0)
+        {
+            sizeOf--;
+        }
         result = malloc(sizeof (char) * sizeOf);
         result[0] = '-';
         indexOfResult = 1;
@@ -58,7 +66,7 @@ char* toStringExp(bfp* value, unsigned int precision)
     // Copy values to result
     for(indexOfResult; indexOfResult < sizeOf; indexOfResult++)
     {
-        if(value->separatorPlace == indexOfResult)
+        if(precision != 0 && (value->sign == 0 && value->separatorPlace == indexOfResult || value->sign == 1 && value->separatorPlace + 1 == indexOfResult))
         {
             result[indexOfResult] = '.';
         }
