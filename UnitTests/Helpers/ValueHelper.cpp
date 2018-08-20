@@ -58,6 +58,21 @@ bool ValueHelper::checkValue(bfp* value, Sign sign, std::string significant, int
     return returnValue;
 }
 
+bool checkEqualBfp(bfp* value1, bfp* value2)
+{
+    return equalBfp(value1, value2);
+}
+
+bool checkGreatherBfp(bfp* value1, bfp* value2)
+{
+    return greatherBfp(value1, value2);
+}
+
+bool checkLessBfp(bfp* value1, bfp* value2)
+{
+    return lessBfp(value1, value2);
+}
+
 bool ValueHelper::checkIsZero(bfp* value)
 {
     return isZero(value);

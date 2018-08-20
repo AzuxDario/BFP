@@ -17,8 +17,9 @@ public:
     static void assignPositiveInf(bfp* value);
     static void assignNegativeInf(bfp* value);
     static bool checkValue(bfp* value, Sign sign, std::string significant, int exponent);
-    // Use functions from library to check if value is NaN or +/- Inf.
+    // Use functions from library to check if values
     // We have unit tests to test these functions so we can know if they function properly.
+    static bool checkEqualBfp(bfp* value1, bfp* value2);
     static bool checkIsZero(bfp* value);
     static bool checkIsNan(bfp* value);
     static bool checkIsPosInf(bfp* value);
