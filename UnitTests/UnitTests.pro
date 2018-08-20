@@ -17,5 +17,6 @@ INCLUDEPATH += $$PWD/../BFP
 DEPENDPATH += $$PWD/../BFP
 
 include(ComparsionTest/ComparsionTest.pri)
+include(ConversionTest/ConversionTest.pri)
 include(InitializationTest/InitializationTest.pri)
 include(Helpers/Helpers.pri)
