@@ -16,6 +16,7 @@ else:unix: LIBS += -L$$OUT_PWD/../BFP/ -lBFP
 INCLUDEPATH += $$PWD/../BFP
 DEPENDPATH += $$PWD/../BFP
 
+include(ArthmeticTest/ArthmeticTest.pri)
 include(ComparsionTest/ComparsionTest.pri)
 include(ConversionTest/ConversionTest.pri)
 include(InitializationTest/InitializationTest.pri)

@@ -20,6 +20,8 @@ public:
     // Use functions from library to check if values
     // We have unit tests to test these functions so we can know if they function properly.
     static bool checkEqualBfp(bfp* value1, bfp* value2);
+    static bool checkGreatherBfp(bfp* value1, bfp* value2);
+    static bool checkLessBfp(bfp* value1, bfp* value2);
     static bool checkIsZero(bfp* value);
     static bool checkIsNan(bfp* value);
     static bool checkIsPosInf(bfp* value);
