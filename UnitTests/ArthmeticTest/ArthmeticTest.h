@@ -23,6 +23,9 @@ private slots:
      void addBfp_NegPosValuesPosResult();
      void addBfp_NegPosValuesNegResult();
      void addBfp_NegPosValuesZeroResult();
+     void addBfp_NaN();
+     void addBfp_PosInf();
+     void addBfp_NegInf();
 
      // These functions are based on initialization and addBfp
      // so not much tests are needed
@@ -39,6 +42,9 @@ private slots:
      void subBfp_NegNegValuesZeroResult();
      void subBfp_PosNegValuesPosResult();
      void subBfp_NegPosValuesNegResult();
+     void subBfp_NaN();
+     void subBfp_PosInf();
+     void subBfp_NegInf();
 
      // These functions are based on initialization and subBfp
      // so not much tests are needed
