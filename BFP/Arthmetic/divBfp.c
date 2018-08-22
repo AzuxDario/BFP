@@ -30,7 +30,7 @@ void divBfp(bfp* value1, bfp* value2)
         return;
 
     }
-    else if((isPositiveInf(value1) && isNegativeInf(value2)) || (isNegativeInf(value1) && isPositiveInf(value2)) || (isPositiveInf(value1) && isPositiveInf(value2)) || (isNegativeInf(value1) && isNegativeInf(value2)))
+    else if(isPositiveInf(value1) || isNegativeInf(value2) || isNegativeInf(value1) || isPositiveInf(value2))
     {
         value1->exponent = bfpExponentMaxValue;
         // NaN should have at least one digit different than 0
