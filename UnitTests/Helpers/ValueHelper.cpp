@@ -9,6 +9,7 @@ void ValueHelper::assignNaN(bfp* value)
 {
     value->sign = 0;
     value->exponent = bfpExponentMaxValue;
+    value->separatorPlace = 1;
     for(int i = 0; i < bfpSignificantArraySize; i++)
     {
         value->significant[i] = 1;
@@ -19,6 +20,7 @@ void ValueHelper::assignPositiveInf(bfp* value)
 {
     value->sign = 0;
     value->exponent = bfpExponentMaxValue;
+    value->separatorPlace = 1;
     for(int i = 0; i < bfpSignificantArraySize; i++)
     {
         value->significant[i] = 0;
@@ -29,6 +31,7 @@ void ValueHelper::assignNegativeInf(bfp* value)
 {
     value->sign = 1;
     value->exponent = bfpExponentMinValue;
+    value->separatorPlace = 1;
     for(int i = 0; i < bfpSignificantArraySize; i++)
     {
         value->significant[i] = 0;
