@@ -152,6 +152,244 @@ void ArthmeticTest::addLongLong_Test()
     QCOMPARE(ValueHelper::checkValue(&value, ValueHelper::Sign::plus, std::string("19") , 1), true);
 }
 
+void ArthmeticTest::divBfp_PosPos()
+{
+    bfp value1, value2;
+    initInt(&value1, 30);
+    initInt(&value2, 15);
+    divBfp(&value1, &value2);
+    QCOMPARE(ValueHelper::checkValue(&value1, ValueHelper::Sign::plus, std::string("2") , 0), true);
+}
+
+void ArthmeticTest::divBfp_PosNeg()
+{
+    bfp value1, value2;
+    initInt(&value1, 30);
+    initInt(&value2, -15);
+    divBfp(&value1, &value2);
+    QCOMPARE(ValueHelper::checkValue(&value1, ValueHelper::Sign::minus, std::string("2") , 0), true);
+}
+
+void ArthmeticTest::divBfp_NegPos()
+{
+    bfp value1, value2;
+    initInt(&value1, -30);
+    initInt(&value2, 15);
+    divBfp(&value1, &value2);
+    QCOMPARE(ValueHelper::checkValue(&value1, ValueHelper::Sign::minus, std::string("2") , 0), true);
+}
+
+void ArthmeticTest::divBfp_NegNeg()
+{
+    bfp value1, value2;
+    initInt(&value1, -30);
+    initInt(&value2, -15);
+    divBfp(&value1, &value2);
+    QCOMPARE(ValueHelper::checkValue(&value1, ValueHelper::Sign::plus, std::string("2") , 0), true);
+}
+
+void ArthmeticTest::divBfp_Zero()
+{
+    bfp value1, value2;
+    initInt(&value1, 15);
+    initInt(&value2, 0);
+    divBfp(&value1, &value2);
+    QCOMPARE(ValueHelper::checkIsNan(&value1), true);
+}
+
+void ArthmeticTest::divBfp_NaN()
+{
+    bfp value1, value2;
+    initInt(&value1, 15);
+    ValueHelper::assignNaN(&value2);
+    divBfp(&value1, &value2);
+    QCOMPARE(ValueHelper::checkIsNan(&value1), true);
+}
+
+void ArthmeticTest::divBfp_PosInf()
+{
+    bfp value1, value2;
+    initInt(&value1, 15);
+    ValueHelper::assignPositiveInf(&value2);
+    divBfp(&value1, &value2);
+    QCOMPARE(ValueHelper::checkIsNan(&value1), true);
+}
+
+void ArthmeticTest::divBfp_NegInf()
+{
+    bfp value1, value2;
+    initInt(&value1, 15);
+    ValueHelper::assignNegativeInf(&value2);
+    divBfp(&value1, &value2);
+    QCOMPARE(ValueHelper::checkIsNan(&value1), true);
+}
+
+void ArthmeticTest::divDouble_Test()
+{
+    bfp value;
+    initInt(&value, 30);
+    divDouble(&value, 15);
+    QCOMPARE(ValueHelper::checkValue(&value, ValueHelper::Sign::plus, std::string("2") , 0), true);
+}
+
+void ArthmeticTest::divFloat_Test()
+{
+    bfp value;
+    initInt(&value, 30);
+    divFloat(&value, 15);
+    QCOMPARE(ValueHelper::checkValue(&value, ValueHelper::Sign::plus, std::string("2") , 0), true);
+}
+
+void ArthmeticTest::divInt_Test()
+{
+    bfp value;
+    initInt(&value, 30);
+    divInt(&value, 15);
+    QCOMPARE(ValueHelper::checkValue(&value, ValueHelper::Sign::plus, std::string("2") , 0), true);
+}
+
+void ArthmeticTest::divLongLong_Test()
+{
+    bfp value;
+    initInt(&value, 30);
+    divLongLong(&value, 15);
+    QCOMPARE(ValueHelper::checkValue(&value, ValueHelper::Sign::plus, std::string("2") , 0), true);
+}
+
+void ArthmeticTest::factInt_Pos()
+{
+    bfp value;
+    factInt(&value, 4);
+    QCOMPARE(ValueHelper::checkValue(&value, ValueHelper::Sign::plus, std::string("24") , 1), true);
+}
+
+void ArthmeticTest::factInt_Zero()
+{
+    bfp value;
+    factInt(&value, 0);
+    QCOMPARE(ValueHelper::checkValue(&value, ValueHelper::Sign::plus, std::string("1") , 0), true);
+}
+
+void ArthmeticTest::mulBfp_PosPos()
+{
+    bfp value1, value2;
+    initInt(&value1, 15);
+    initInt(&value2, 4);
+    mulBfp(&value1, &value2);
+    QCOMPARE(ValueHelper::checkValue(&value1, ValueHelper::Sign::plus, std::string("60") , 1), true);
+}
+
+void ArthmeticTest::mulBfp_PosNeg()
+{
+    bfp value1, value2;
+    initInt(&value1, 15);
+    initInt(&value2, -4);
+    mulBfp(&value1, &value2);
+    QCOMPARE(ValueHelper::checkValue(&value1, ValueHelper::Sign::minus, std::string("60") , 1), true);
+}
+
+void ArthmeticTest::mulBfp_NegPos()
+{
+    bfp value1, value2;
+    initInt(&value1, -15);
+    initInt(&value2, 4);
+    mulBfp(&value1, &value2);
+    QCOMPARE(ValueHelper::checkValue(&value1, ValueHelper::Sign::minus, std::string("60") , 1), true);
+}
+
+void ArthmeticTest::mulBfp_NegNeg()
+{
+    bfp value1, value2;
+    initInt(&value1, -15);
+    initInt(&value2, -4);
+    mulBfp(&value1, &value2);
+    QCOMPARE(ValueHelper::checkValue(&value1, ValueHelper::Sign::plus, std::string("60") , 1), true);
+}
+
+void ArthmeticTest::mulBfp_Zero()
+{
+    bfp value1, value2;
+    initInt(&value1, 15);
+    initInt(&value2, 0);
+    mulBfp(&value1, &value2);
+    QCOMPARE(ValueHelper::checkIsZero(&value1), true);
+}
+
+void ArthmeticTest::mulBfp_NaN()
+{
+    bfp value1, value2;
+    initInt(&value1, 15);
+    ValueHelper::assignNaN(&value2);
+    mulBfp(&value1, &value2);
+    QCOMPARE(ValueHelper::checkIsNan(&value1), true);
+}
+
+void ArthmeticTest::mulBfp_PosInf()
+{
+    bfp value1, value2;
+    initInt(&value1, 15);
+    ValueHelper::assignPositiveInf(&value2);
+    mulBfp(&value1, &value2);
+    QCOMPARE(ValueHelper::checkIsPosInf(&value1), true);
+}
+
+void ArthmeticTest::mulBfp_NegInf()
+{
+    bfp value1, value2;
+    initInt(&value1, 15);
+    ValueHelper::assignNegativeInf(&value2);
+    mulBfp(&value1, &value2);
+    QCOMPARE(ValueHelper::checkIsNegInf(&value1), true);
+}
+
+void ArthmeticTest::mulDouble_Test()
+{
+    bfp value;
+    initInt(&value, 15);
+    mulDouble(&value, 4);
+    QCOMPARE(ValueHelper::checkValue(&value, ValueHelper::Sign::plus, std::string("60") , 1), true);
+}
+
+void ArthmeticTest::mulFloat_Test()
+{
+    bfp value;
+    initInt(&value, 15);
+    mulFloat(&value, 4);
+    QCOMPARE(ValueHelper::checkValue(&value, ValueHelper::Sign::plus, std::string("60") , 1), true);
+}
+
+void ArthmeticTest::mulInt_Test()
+{
+    bfp value;
+    initInt(&value, 15);
+    mulInt(&value, 4);
+    QCOMPARE(ValueHelper::checkValue(&value, ValueHelper::Sign::plus, std::string("60") , 1), true);
+}
+
+void ArthmeticTest::mulLongLong_Test()
+{
+    bfp value;
+    initInt(&value, 15);
+    mulLongLong(&value, 4);
+    QCOMPARE(ValueHelper::checkValue(&value, ValueHelper::Sign::plus, std::string("60") , 1), true);
+}
+
+void ArthmeticTest::negBfp_Pos()
+{
+    bfp value;
+    initInt(&value, 15);
+    negBfp(&value);
+    QCOMPARE(ValueHelper::checkValue(&value, ValueHelper::Sign::minus, std::string("15") , 1), true);
+}
+
+void ArthmeticTest::negBfp_Neg()
+{
+    bfp value;
+    initInt(&value, -15);
+    negBfp(&value);
+    QCOMPARE(ValueHelper::checkValue(&value, ValueHelper::Sign::plus, std::string("15") , 1), true);
+}
+
 void ArthmeticTest::subBfp_PosPosValuesPosResult()
 {
     bfp value1, value2;

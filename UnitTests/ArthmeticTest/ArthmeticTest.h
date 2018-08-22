@@ -34,6 +34,44 @@ private slots:
      void addInt_Test();
      void addLongLong_Test();
 
+     void divBfp_PosPos();
+     void divBfp_PosNeg();
+     void divBfp_NegPos();
+     void divBfp_NegNeg();
+     void divBfp_Zero();
+     void divBfp_NaN();
+     void divBfp_PosInf();
+     void divBfp_NegInf();
+
+     // These functions are based on initialization and addBfp
+     // so not much tests are needed
+     void divDouble_Test();
+     void divFloat_Test();
+     void divInt_Test();
+     void divLongLong_Test();
+
+     void factInt_Pos();
+     void factInt_Zero();
+
+     void mulBfp_PosPos();
+     void mulBfp_PosNeg();
+     void mulBfp_NegPos();
+     void mulBfp_NegNeg();
+     void mulBfp_Zero();
+     void mulBfp_NaN();
+     void mulBfp_PosInf();
+     void mulBfp_NegInf();
+
+     // These functions are based on initialization and addBfp
+     // so not much tests are needed
+     void mulDouble_Test();
+     void mulFloat_Test();
+     void mulInt_Test();
+     void mulLongLong_Test();
+
+     void negBfp_Pos();
+     void negBfp_Neg();
+
      void subBfp_PosPosValuesPosResult();
      void subBfp_PosPosValuesNegResult();
      void subBfp_PosPosValuesZeroResult();
