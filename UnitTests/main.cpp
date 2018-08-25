@@ -3,6 +3,7 @@
 #include "ComparsionTest/ComparsionTest.h"
 #include "ConversionTest/ConversionTest.h"
 #include "CyclometricTest/CyclometricTest.h"
+#include "ExponentialAndLogarithmicTest/ExponentialAndLogarithmicTest.h"
 #include "InitializationTest/InitializationTest.h"
 
 int main(int argc, char** argv)
@@ -12,10 +13,12 @@ int main(int argc, char** argv)
     ConversionTest conversionTest;
     ArthmeticTest arthmeticTest;
     CyclometricTest cyclometricTest;
+    ExponentialAndLogarithmicTest exponentialAndLogarithmicTest;
 
     return QTest::qExec(&comparsionTest, argc, argv) |
            QTest::qExec(&initializationTest, argc, argv) |
            QTest::qExec(&conversionTest, argc, argv) |
            QTest::qExec(&arthmeticTest, argc, argv) |
-           QTest::qExec(&cyclometricTest, argc, argv);
+           QTest::qExec(&cyclometricTest, argc, argv) |
+           QTest::qExec(&exponentialAndLogarithmicTest, argc, argv);
 }
