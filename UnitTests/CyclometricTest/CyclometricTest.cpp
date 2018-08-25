@@ -218,3 +218,30 @@ void CyclometricTest::atan2Bfp_ZeroZero()
     atan2Bfp(&value1, &value2);
     QCOMPARE(ValueHelper::checkIsNan(&value1), true);
 }
+
+void CyclometricTest::atan2Bfp_NaN()
+{
+    bfp value1, value2;
+    ValueHelper::assignNaN(&value1);
+    ValueHelper::assignNaN(&value2);
+    atan2Bfp(&value1, &value2);
+    QCOMPARE(ValueHelper::checkIsNan(&value1), true);
+}
+
+void CyclometricTest::atan2Bfp_PosInf()
+{
+    bfp value1, value2;
+    ValueHelper::assignPositiveInf(&value1);
+    ValueHelper::assignPositiveInf(&value2);
+    atan2Bfp(&value1, &value2);
+    QCOMPARE(ValueHelper::checkIsNan(&value1), true);
+}
+
+void CyclometricTest::atan2Bfp_NegInf()
+{
+    bfp value1, value2;
+    ValueHelper::assignNegativeInf(&value1);
+    ValueHelper::assignNegativeInf(&value2);
+    atan2Bfp(&value1, &value2);
+    QCOMPARE(ValueHelper::checkIsNan(&value1), true);
+}

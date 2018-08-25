@@ -42,9 +42,9 @@ private slots:
     void atan2Bfp_PosZero();
     void atan2Bfp_NegZero();
     void atan2Bfp_ZeroZero();
-    //void atan2Bfp_NaN();
-    //void atan2Bfp_PosInf();
-    //void atan2Bfp_NegInf();
+    void atan2Bfp_NaN();
+    void atan2Bfp_PosInf();
+    void atan2Bfp_NegInf();
 
 };
 
