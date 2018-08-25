@@ -17,6 +17,10 @@ int greatherBfp(bfp* value1, bfp* value2)
     // Values are positive
     else if(value1->sign == 0 && value2->sign == 0)
     {
+        if(isZero(value2) == 1 && isZero(value1) == 0)
+        {
+            return 1;
+        }
         if(value1->exponent < value2->exponent)
         {
             return 0;
@@ -43,11 +47,11 @@ int greatherBfp(bfp* value1, bfp* value2)
     //Values are negative
     else if(value1->sign == 1 && value2->sign == 1)
     {
-        if(value1->exponent > value2->exponent)
+        if(value1->exponent < value2->exponent)
         {
             return 0;
         }
-        else if(value1->exponent < value2->exponent)
+        else if(value1->exponent > value2->exponent)
         {
             return 1;
         }

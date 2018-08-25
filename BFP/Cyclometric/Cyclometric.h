@@ -1,6 +1,7 @@
 #ifndef CYCLOMETRIC_H
 #define CYCLOMETRIC_H
 #include "BFP.h"
+#include "stdbool.h"
 
 #ifdef __cplusplus
 extern "C"{

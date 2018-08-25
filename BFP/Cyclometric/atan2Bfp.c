@@ -7,9 +7,10 @@ void atan2Bfp(bfp* value1, bfp* value2)
 {
     bfp zero;
     bfp division;
-    bfp piDiv2;
+    bfp pi, piDiv2;
 
     initZero(&zero);
+    initString(&pi, bfpPi);
     initString(&piDiv2, bfpPi);
     divInt(&piDiv2, 2);
 
@@ -26,7 +27,7 @@ void atan2Bfp(bfp* value1, bfp* value2)
         initBFP(&division, value1);
         divBfp(&division, value2);
         atanBfp(&division);
-        addBfp(&division, &piDiv2);
+        addBfp(&division, &pi);
         initBFP(value1, &division);
     }
     else if(lessBfp(value2, &zero) && lessBfp(value1, &zero))
@@ -34,7 +35,7 @@ void atan2Bfp(bfp* value1, bfp* value2)
         initBFP(&division, value1);
         divBfp(&division, value2);
         atanBfp(&division);
-        subBfp(&division, &piDiv2);
+        subBfp(&division, &pi);
         initBFP(value1, &division);
     }
     else if(isZero(value2) && greatherBfp(value1, &zero))
