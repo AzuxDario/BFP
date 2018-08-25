@@ -151,6 +151,7 @@ void divBfp(bfp* value1, bfp* value2)
 
     // Assing result to value1
     initBFP(value1, &result);
+    normalization(value1);
 
 
 }
