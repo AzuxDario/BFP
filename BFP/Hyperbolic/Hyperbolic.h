@@ -16,7 +16,7 @@ void coshBfp(bfp* value);
 /*!
   \param value value calculate.
 */
-void tanhBfp(bfp* value);
+void ctanhBfp(bfp* value);
 
 //! Calculate hiperbolic sinus.
 /*!
