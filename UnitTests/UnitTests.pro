@@ -19,5 +19,6 @@ DEPENDPATH += $$PWD/../BFP
 include(ArthmeticTest/ArthmeticTest.pri)
 include(ComparsionTest/ComparsionTest.pri)
 include(ConversionTest/ConversionTest.pri)
+include(CyclometricTest/CyclometricTest.pri)
 include(InitializationTest/InitializationTest.pri)
 include(Helpers/Helpers.pri)
