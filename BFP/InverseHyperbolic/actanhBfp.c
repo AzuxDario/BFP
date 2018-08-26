@@ -24,7 +24,7 @@ void actanhBfp(bfp* value)
         initBFP(&temp, value);
         addInt(&temp, 1);
         initBFP(&temp2, value);
-        subInt(&temp2, -1);
+        subInt(&temp2, 1);
         divBfp(&temp, &temp2);
         logBfp(&temp);
         mulDouble(&temp, 0.5);
