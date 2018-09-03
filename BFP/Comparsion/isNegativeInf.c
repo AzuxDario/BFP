@@ -2,8 +2,15 @@
 
 int isNegativeInf(bfp* value)
 {
-    if(value->exponent == bfpExponentMinValue && isZero(value) == 1)
+    if(value->exponent == bfpExponentMinValue)
     {
+        for(int i = 0; i < bfpSignificantArraySize; i++)
+        {
+            if(value->significant[i] != 0 )
+            {
+                return 0;
+            }
+        }
         return 1;
     }
     else

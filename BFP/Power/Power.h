@@ -2,6 +2,10 @@
 #define POWER_H
 #include "BFP.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 //! Multiply first value by second value
 /*!
   \param value1 base.
@@ -21,4 +25,9 @@ void powLongLong(bfp* value1, long long value2);
   \param value value to calculate.
 */
 void sqrtBfp(bfp* value1);
+
+#ifdef __cplusplus
+}
+#endif
+
 #endif // POWER_H

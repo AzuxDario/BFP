@@ -2,6 +2,10 @@
 #define COMPARSION_H
 #include "BFP.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 //! Check if value is NaN.
 /*!
   \param value value to check.
@@ -46,5 +50,9 @@ int equalBfp(bfp* value1, bfp* value2);
   \param value2 value to compare.
 */
 int greatherBfp(bfp* value1, bfp* value2);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // COMPARSION_H

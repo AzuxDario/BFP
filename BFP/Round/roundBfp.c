@@ -6,6 +6,14 @@ void roundBfp(bfp* value)
 {
     bfp tempValue;
 
+    if(isNaN(value) || isNegativeInf(value) || isPositiveInf(value))
+    {
+        value->exponent = bfpExponentMaxValue;
+        // NaN should have at least one digit different than 0
+        value->significant[0] = 1;
+        return;
+    }
+
     // If we don't have info about the fractional part, there's no point to round
     if(value->exponent > bfpSignificantArraySize - 1)
     {

@@ -2,6 +2,10 @@
 #define INVERSEHYPERBOLIC_H
 #include "BFP.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 //! Calculate inverse hyperbolic cosine.
 /*!
   \param value value calculate.
@@ -25,5 +29,9 @@ void asinhBfp(bfp* value);
   \param value value calculate.
 */
 void atanhBfp(bfp* value);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // INVERSEHYPERBOLIC_H

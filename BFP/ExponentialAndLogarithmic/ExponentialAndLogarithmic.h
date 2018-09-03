@@ -2,6 +2,10 @@
 #define EXPONENTIALANDLOGARITHMIC_H
 #include "BFP.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 //! Calculate exponent.
 /*!
   \param value value calculate.
@@ -19,5 +23,9 @@ void log10Bfp(bfp* value);
   \param value value calculate.
 */
 void logBfp(bfp* value);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // EXPONENTIALANDLOGARITHMIC_H

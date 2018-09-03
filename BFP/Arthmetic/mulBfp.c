@@ -19,30 +19,27 @@ void mulBfp(bfp* value1, bfp* value2)
         initBFP(value1, value2);
         return;
     }
-    else if((isPositiveInf(value1) && isZero(value2)) || (isZero(value1) && isNegativeInf(value2)) || (isNegativeInf(value1)&& isZero(value2)) || (isZero(value1) && isPositiveInf(value2)))
+    else if((isPositiveInf(value1) && isZero(value2)) || (isZero(value1) && isNegativeInf(value2)) || (isNegativeInf(value1) && isZero(value2)) || (isZero(value1) && isPositiveInf(value2)))
     {
         value1->exponent = bfpExponentMaxValue;
         // NaN should have at least one digit different than 0
         value1->significant[0] = 1;
         return;
     }
-    else if((isPositiveInf(value1) && isNegativeInf(value2)) || (isNegativeInf(value1) && isPositiveInf(value2)))
+    else if(isNegativeInf(value1) || isNegativeInf(value2) || isPositiveInf(value1) || isPositiveInf(value2))
     {
         // Inf
         value1->separatorPlace = 1;
-        value1->sign = 1;
-        // In Inf we should make sure every value will be zero
-        for(int i = 0; i < bfpSignificantArraySize; i++)
+        if(value1->sign == value2->sign)
         {
-            value1->significant[i] = 0;
+            value1->sign = 0;
+            value1->exponent = bfpExponentMaxValue;
         }
-        return;
-    }
-    else if((isPositiveInf(value1) && isPositiveInf(value2)) || (isNegativeInf(value1) && isNegativeInf(value2)))
-    {
-        // Inf
-        value1->separatorPlace = 1;
-        value1->sign = 0;
+        else
+        {
+            value1->sign = 1;
+            value1->exponent = bfpExponentMinValue;
+        }
         // In Inf we should make sure every value will be zero
         for(int i = 0; i < bfpSignificantArraySize; i++)
         {

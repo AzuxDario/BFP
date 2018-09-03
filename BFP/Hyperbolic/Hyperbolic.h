@@ -2,6 +2,10 @@
 #define HYPERBOLIC_H
 #include "BFP.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 //! Calculate hiperbolic cosinus.
 /*!
   \param value value calculate.
@@ -12,7 +16,7 @@ void coshBfp(bfp* value);
 /*!
   \param value value calculate.
 */
-void tanhBfp(bfp* value);
+void ctanhBfp(bfp* value);
 
 //! Calculate hiperbolic sinus.
 /*!
@@ -25,5 +29,9 @@ void sinhBfp(bfp* value);
   \param value value calculate.
 */
 void tanhBfp(bfp* value);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // HYPERBOLIC_H

@@ -2,6 +2,10 @@
 #define TRIGONOMETRY_H
 #include "BFP.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 //! Calculate cosine.
 /*!
   \param value value calculate.
@@ -25,4 +29,9 @@ void tanBfp(bfp* value);
   \param value value calculate.
 */
 void sinBfp(bfp* value);
+
+#ifdef __cplusplus
+}
+#endif
+
 #endif // TRIGONOMETRY_H

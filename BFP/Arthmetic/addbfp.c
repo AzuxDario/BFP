@@ -17,7 +17,7 @@ void addBfp(bfp* value1, bfp* value2)
         initBFP(value1, value2);
         return;
     }
-    else if((isPositiveInf(value1) && isNegativeInf(value2)) || (isNegativeInf(value1) && isPositiveInf(value2)))
+    else if(isPositiveInf(value1) || isNegativeInf(value2) || isNegativeInf(value1) || isPositiveInf(value2))
     {
         value1->exponent = bfpExponentMaxValue;
         // NaN should have at least one digit different than 0
@@ -129,48 +129,28 @@ void addBfp(bfp* value1, bfp* value2)
         // Values have different signs do subtraction
         if(greatherBfp(value1, value2) == 1)
         {
-            if(value1->sign == 0 && value2->sign == 1)
-            {
-                // Change sign to +
-                value2->sign = 0;
+            // Change sign to +
+            value2->sign = 0;
 
-                subBfp(value1, value2);
-                // Restore sign
-                value2->sign = 1;
-            }
-            //value1->sign == 1 && value2->sign == 0
-            else
-            {
-                // Change sign to +
-                value1->sign = 0;
-
-                subBfp(value1, value2);
-                // Restore sign and value should be negative
-                value1->sign = 1;
-            }
+            subBfp(value1, value2);
+            // Restore sign
+            value2->sign = 1;
         }
         else
         {
-            if(value1->sign == 0 && value2->sign == 1)
-            {
-                // Change sign to +
-                value2->sign = 0;
 
-                subBfp(value1, value2);
-                // Restore sign
-                value2->sign = 1;
-                // Value should be negative
-                value1->sign = 1;
+            // Change sign to +
+            value1->sign = 0;
+
+            subBfp(value1, value2);
+            // Sign should be negated
+            if(value1->sign)
+            {
+                value1->sign = 0;
             }
-            //value1->sign == 1 && value2->sign == 0
             else
             {
-                // Change sign to +
-                value1->sign = 0;
-
-                subBfp(value1, value2);
-                // Value should be positive
-                value1->sign = 0;
+                value1->sign = 1;
             }
         }
 

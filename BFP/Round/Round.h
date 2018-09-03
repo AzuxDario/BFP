@@ -1,6 +1,11 @@
 #ifndef ROUND_H
 #define ROUND_H
 #include "BFP.h"
+#include "Comparsion/comparsion.h"
+
+#ifdef __cplusplus
+extern "C"{
+#endif
 
 //! Rounds x upward, returning the smallest integral value that is not less than x.
 /*!
@@ -19,5 +24,9 @@ void floorBfp(bfp* value);
   \param value value to ceil.
 */
 void roundBfp(bfp* value);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // ROUND_H

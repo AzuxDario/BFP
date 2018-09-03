@@ -11,7 +11,7 @@ void asinhBfp(bfp* value)
 
     initBFP(&temp, value);
     powInt(&temp, 2);
-    subInt(&temp, 1);
+    addInt(&temp, 1);
     sqrtBfp(&temp);
     addBfp(&temp, value);
     logBfp(&temp);
