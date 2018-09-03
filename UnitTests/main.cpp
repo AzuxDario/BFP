@@ -8,6 +8,7 @@
 #include "InitializationTest/InitializationTest.h"
 #include "InverseHyperbolicTest/InverseHyperbolicTest.h"
 #include "PowerTest/PowerTest.h"
+#include "RoundTest/RoundTest.h"
 
 int main(int argc, char** argv)
 {
@@ -20,6 +21,7 @@ int main(int argc, char** argv)
     HyperbolicTest hyperbolicTest;
     InverseHyperbolicTest inverseHyperbolicTest;
     PowerTest powerTest;
+    RoundTest roundTest;
 
     return QTest::qExec(&comparsionTest, argc, argv) |
            QTest::qExec(&initializationTest, argc, argv) |
@@ -29,5 +31,6 @@ int main(int argc, char** argv)
            QTest::qExec(&exponentialAndLogarithmicTest, argc, argv) |
            QTest::qExec(&hyperbolicTest, argc, argv) |
            QTest::qExec(&inverseHyperbolicTest, argc, argv) |
-           QTest::qExec(&powerTest, argc, argv);
+           QTest::qExec(&powerTest, argc, argv) |
+           QTest::qExec(&roundTest, argc, argv);
 }
